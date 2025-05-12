@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const mockUsers = [
-  { email: "joao@email.com", password: "123456" },
-  { email: "maria@email.com", password: "abcdef" },
+  
 ];
 
 export default function Login() {
