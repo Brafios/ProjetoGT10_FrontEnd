@@ -22,9 +22,13 @@ function App() {
           </Routes>
         </main>
 
-        <footer className="w-screen h-20 bg-black">
+        <footer className="w-screen h-40 bg-gray-300 text-white">
           <div className='logoCompleta'>
-            <img src="./assets/img/LogoCompleta.png" alt="" />
+            <img src="./src/assets/img/LogoCompleta(1).png" alt="" />
+            <p className='text-sm'>Copyright: @ 2020 Landify Ui kit <br></br> All rights reserved</p>
+            <div className='icones '>
+
+            </div>
           </div>
         </footer>
       </>
