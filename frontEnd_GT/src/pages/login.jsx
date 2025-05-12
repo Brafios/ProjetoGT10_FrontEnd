@@ -30,10 +30,10 @@ export default function Login() {
         <h1 className="text-3xl text-center text-white font-bold font-serif mt-3 mb-3">Login</h1>
         <div className="flex justify-center">
             <div className="flex flex-col">
-                <label htmlFor="" className="font-serif font-medium font-semibold">Usuário ou E-mail</label>
+                <label htmlFor="" className="font-serif  font-semibold">Usuário ou E-mail</label>
                 <input  value={email} className="bg-gray-300 text-center w-150 h-10 mp-1 mb-3 " onChange={(e) => setEmail(e.target.value)} />
                 <div className="flex justify-between items-center mb-1">
-                    <label htmlFor="password" className="font-serif font-medium font-semibold ">Senha</label>
+                    <label htmlFor="password" className="font-serif  font-semibold ">Senha</label>
                     <a href="/recuperar" className="text-sm text-blue-500 hover:underline">Esqueceu a senha?</a>
                 </div>
                 <input  type="password" value={password} className="bg-gray-300 text-center w-150 h-10  mb-3" onChange={(e) => setPassword(e.target.value)} />
