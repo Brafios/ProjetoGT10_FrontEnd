@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import './components/Footer/Footer.css'
+import Layout from './Layout'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/Register";
+import { Footer } from './components/Footer';
+// import Meunome from  "./pages/Register";
 
 
 
@@ -12,6 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
+<<<<<<< HEAD
       <>
         <header className='w-screen h-20 bg-gray-400'>
           {/* Conteúdo do header */}
@@ -38,6 +43,14 @@ function App() {
           </div>
         </footer>
       </>
+=======
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </Layout>
+>>>>>>> 73a13e1825e42c2f21ed25f167e6513462e4bf2b
     </BrowserRouter>
   )
 }
