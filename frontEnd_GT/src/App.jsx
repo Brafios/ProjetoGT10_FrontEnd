@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import './components/Footer/Footer.css'
 import Layout from './Layout'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/Register";
+import { Footer } from './components/Footer';
+// import Meunome from  "./pages/Register";
 
 function App() {
   const [count, setCount] = useState(0)
