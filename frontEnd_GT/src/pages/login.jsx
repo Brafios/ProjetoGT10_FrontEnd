@@ -1,3 +1,50 @@
+// import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+
+// const mockUsers = [
+//   { email: "joao@email.com", password: "123456" },
+//   { email: "maria@email.com", password: "abcdef" },
+// ];
+
+// export default function Login() {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const navigate = useNavigate();
+
+//   const handleLogin = () => {
+//     const foundUser = mockUsers.find(
+//       (user) => user.email === email && user.password === password
+//     );
+//     if (foundUser) {
+//       alert("Login bem-sucedido!");
+//       navigate("/home"); // rota a ser criada no desafio
+//     } else {
+//       alert("Credenciais inválidas.");
+//     }
+//   };
+
+//   return (
+//     <div className="w-screen h-130 bg-white flex justify-center items-center">
+//         <div className="flex flex-col items-center w-100">
+//             <div className="flex  flex-col justify-center -mt-30">
+//                 <h1 className="text-3xl text-center font-bold font-serif mb-3">Login</h1>
+//                 <div className="flex flex-col">
+//                     <label htmlFor="" className="font-serif  font-semibold">Usuário ou E-mail</label>
+//                     <input  value={email} className="bg-gray-300 text-center w-150 h-10 mp-1 mb-3 " onChange={(e) => setEmail(e.target.value)} />
+//                     <div className="flex justify-between items-center mb-1">
+//                         <label htmlFor="password" className="font-serif  font-semibold ">Senha</label>
+//                         <a href="/recuperar" className="text-sm text-blue-500 hover:underline">Esqueceu a senha?</a>
+//                     </div>
+//                     <input  type="password" value={password} className="bg-gray-300 text-center w-150 h-10  mb-3" onChange={(e) => setPassword(e.target.value)} />
+//                 </div>
+//             </div>
+//             <button className="bg-gray-500 text-white font-bold rounded-md mb-2 w-50 h-8" onClick={handleLogin}>Entrar</button>
+//             <p>Não tem conta? <a href="/register" className="font-bold">Cadastre-se</a></p>
+//         </div>
+//     </div>
+//   );
+// }
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -17,31 +64,39 @@ export default function Login() {
     );
     if (foundUser) {
       alert("Login bem-sucedido!");
-      navigate("/home"); // rota a ser criada no desafio
+      navigate("/home");
     } else {
       alert("Credenciais inválidas.");
     }
   };
 
   return (
-    
-    <div className="w-screen h-130 bg-white flex justify-center items-center">
-        <div className="flex flex-col items-center w-100">
-            <div className="flex  flex-col justify-center -mt-30">
-                <h1 className="text-3xl text-center font-bold font-serif mb-3">Login</h1>
-                <div className="flex flex-col">
-                    <label htmlFor="" className="font-serif  font-semibold">Usuário ou E-mail</label>
-                    <input  value={email} className="bg-gray-300 text-center w-150 h-10 mp-1 mb-3 " onChange={(e) => setEmail(e.target.value)} />
-                    <div className="flex justify-between items-center mb-1">
-                        <label htmlFor="password" className="font-serif  font-semibold ">Senha</label>
-                        <a href="/recuperar" className="text-sm text-blue-500 hover:underline">Esqueceu a senha?</a>
-                    </div>
-                    <input  type="password" value={password} className="bg-gray-300 text-center w-150 h-10  mb-3" onChange={(e) => setPassword(e.target.value)} />
-                </div>
-            </div>
-            <button className="bg-blue-500 text-white font-bold rounded-md mb-2 w-50 h-8" onClick={handleLogin}>Entrar</button>
-            <p>Não tem conta? <a href="/register" className="font-bold">Cadastre-se</a></p>
+    <div className="w-screen min-h-screen bg-white flex justify-center items-center px-4">
+      <div className="flex flex-col items-center w-full max-w-md p-6 bg-gray-100 rounded-md shadow-md">
+        <h1 className="text-3xl text-center font-bold font-serif mb-6">Login</h1>
+        <div className="flex flex-col w-full">
+          <label className="font-serif font-semibold">Usuário ou E-mail</label>
+          <input
+            value={email}
+            className="bg-gray-300 text-center w-full h-10 p-2 mb-4 rounded-md"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <div className="flex justify-between items-center mb-2">
+            <label htmlFor="password" className="font-serif font-semibold">Senha</label>
+            <a href="/recuperar" className="text-sm text-blue-500 hover:underline">Esqueceu a senha?</a>
+          </div>
+          <input
+            type="password"
+            value={password}
+            className="bg-gray-300 text-center w-full h-10 p-2 mb-4 rounded-md"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
+        <button className="bg-gray-500 text-white font-bold rounded-md w-full h-10 mb-4 hover:bg-gray-600 transition" onClick={handleLogin}>
+          Entrar
+        </button>
+        <p>Não tem conta? <a href="/register" className="font-bold text-blue-500 hover:underline">Cadastre-se</a></p>
+      </div>
     </div>
   );
 }

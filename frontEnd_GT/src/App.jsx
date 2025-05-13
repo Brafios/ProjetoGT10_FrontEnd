@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/Register";
 
+
+
 function App() {
   const [count, setCount] = useState(0)
   const [texto, setTexto] = useState("");
@@ -19,10 +21,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/recuperar" element={<Recuperar />} />
-            <Route path="/home" element={<Home />} />
+            {/* <Route path="/recuperar" element={<Recuperar />} /> */}
+            {/* <Route path="/home" element={<Home />} />
             <Route path="/contato" element={<Contato />} />
-            <Route path="/associacao" element={<Associaco />} />
+            <Route path="/associacao" element={<Associaco />} /> */}
           </Routes>
         </main>
 
