@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './Layout'
 import Login from "./pages/login";
 import Register from "./pages/Register";
+import Recuperar from "./pages/Recuperar";
 import { Footer } from './components/Footer';
 // import Meunome from  "./pages/Register";
 import Contato from './pages/contato';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contato" element={<Contato />} />
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/recuperar" element={<Recuperar />} />
         </Routes>
       </Layout>
       <Footer/>

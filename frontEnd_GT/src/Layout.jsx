@@ -195,8 +195,8 @@ export default function Layout({ children }) {
         </DialogPanel>
       </Dialog>
     </header>
-        <main className=''>{children}</main>
-        {/* <footer className="w-screen h-20 bg-gray-300 text-white"></footer> */}
+        <main>{children}</main>
+        <footer className="w-screen h-20 bg-gray-300 text-white"></footer>
       </>
     );
   }
