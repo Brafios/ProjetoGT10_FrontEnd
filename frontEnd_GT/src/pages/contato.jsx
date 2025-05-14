@@ -53,9 +53,9 @@ export default function Contato (props) {
               </div>
               <form name="sentMessage" validate onSubmit={handleSubmit}>
                 <div className="row flex flex-col w-full">
-                  <div className="w-full">
+                  <div className="w-full mt-3">
                     <div className="form-group w-full">
-                        <p>Nome</p>
+                      <p>Nome</p>
                       <input
                         type="text"
                         id="name"
@@ -67,54 +67,48 @@ export default function Contato (props) {
                       <p className="help-block text-danger"></p>
                     </div>
                     <div className="form-group">
-                            <p>Email</p>
-                            <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            className="form-control"
-                            required
-                            onChange={handleChange}
-                        />
-                        <p className="help-block text-danger"></p>
-                        </div>
-                    <div className="form-group">
-                            <p>Telefone</p>
-                                <input
-                                type="phone"
-                                id="phone"
-                                name="phone"
-                                className="form-control"
-                                required
-                                onChange={handleChange}
-                            />
-                        <p className="help-block text-danger"></p>
-                        </div>
-
-                    
-
-                    <div className="form-group">
-                        <p>Mensagem</p>
-                        <textarea
-                        name="message"
-                        id="message"
+                      <p>Email</p>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
                         className="form-control"
-                        rows="3"
                         required
                         onChange={handleChange}
-                        ></textarea>
-                        <p className="help-block text-danger"></p>
+                      />
+                      <p className="help-block text-danger"></p>
                     </div>
-
-                  </div>
-
-                  
+                    <div className="form-group">
+                      <p>Telefone</p>
+                        <input
+                          type="phone"
+                          id="phone"
+                          name="phone"
+                          className="form-control"
+                          required
+                          onChange={handleChange}
+                        />
+                      <p className="help-block text-danger"></p>
+                    </div>
+                    <div className="form-group">
+                      <p>Mensagem</p>
+                        <textarea
+                          name="message"
+                          id="message"
+                          className="form-control"
+                          rows="3"
+                          required
+                          onChange={handleChange}
+                        ></textarea>
+                      <p className="help-block text-danger"></p>
+                    </div>
+                  </div>        
                 </div>
                 
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
-                </button>
+                <div id="success" className=""></div>
+                  <button type="submit" className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center mt-10 mb-10">
+                    Enviar
+                  </button>
               </form>
             </div>
           </div>

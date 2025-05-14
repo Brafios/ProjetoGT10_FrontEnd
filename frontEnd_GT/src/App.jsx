@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import './components/Footer/Footer.css'
-import Layout from './Layout'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './Layout'
 import Login from "./pages/login";
