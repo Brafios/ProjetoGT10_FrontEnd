@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Login from "./pages/login";
 import logo from "./assets/img/LogoFACC.jpg"
 
 import {
@@ -21,7 +20,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const products = [
-    { name: 'Filiadas', description: '', href: '#' }
+    { name: 'Filiadas', description: '', href: '/associacao' }
   ]
 
 export default function Layout({ children }) {
@@ -31,7 +30,7 @@ export default function Layout({ children }) {
         <header className="bg-gray-700">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">FACC</span>
             <img
               alt=""
@@ -97,13 +96,13 @@ export default function Layout({ children }) {
           <a href="#" className="text-sm/6 font-semibold text-white no-underline">
             Notícias
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-white no-underline">
+          <a href="/contato" className="text-sm/6 font-semibold text-white no-underline">
             Contato
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/" className="text-sm/6 font-semibold text-white no-underline">
-            Login <span aria-hidden="true">&rarr;</span>
+          <a href="/login" className="text-sm/6 font-semibold text-black no-underline bg-white rounded-sm p-2">
+            Login 
           </a>
         </div>
       </nav>
@@ -111,7 +110,7 @@ export default function Layout({ children }) {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/home" className="-m-1.5 p-1.5">
               <span className="sr-only">FACC</span>
               <img
                 alt=""
@@ -177,7 +176,7 @@ export default function Layout({ children }) {
                   Notícias
                 </a>
                 <a
-                  href="#"
+                  href="/contato"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Contato
@@ -185,7 +184,7 @@ export default function Layout({ children }) {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Login

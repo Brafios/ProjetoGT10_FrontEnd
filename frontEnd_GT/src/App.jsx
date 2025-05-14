@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import './components/Footer/Footer.css'
-import Layout from './Layout'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './Layout';
+import Home from "./pages/home";
+// import Associacao from "./pages/associacao";
 import Login from "./pages/login";
 import Register from "./pages/Register";
 import Recuperar from "./pages/Recuperar";
@@ -24,8 +26,10 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/associacao" element={<Associacao />} /> */}
           <Route path="/contato" element={<Contato />} />
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path='/associacoes' element={< Associacoes/>}/>
           <Route path="/recuperar" element={<Recuperar />} />
