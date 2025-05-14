@@ -4,11 +4,9 @@ import { Footer } from './components/Footer';
 import './App.css'
 import './components/Footer/Footer.css'
 import Layout from './Layout'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/Register";
-import Recuperar from "./pages/Recuperar";
-import { Footer } from './components/Footer';
+import Recuperar from "../src/pages/Recuperar"
 import Contato from './pages/contato';
 import Associacoes from './pages/Associacoes';
 import Home from './pages/Home/home';
