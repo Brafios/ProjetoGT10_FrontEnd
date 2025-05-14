@@ -10,7 +10,7 @@ import Register from "./pages/Register";
 import Recuperar from "./pages/Recuperar";
 import { Footer } from './components/Footer';
 import Contato from './pages/contato';
-import Associacoes from './pages/Associacoes';
+import Associacoes from './pages/Associacoes/index';
 import './App.css'
 
 
