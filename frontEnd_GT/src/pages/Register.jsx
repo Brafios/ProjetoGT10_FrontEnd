@@ -12,11 +12,11 @@ export default function Register() {
 
             <form className="flex flex-col w-[400px] gap-4">
               {[
-                { label: "Nome Completo", type: "text" },
-                { label: "Usuário", type: "text" },
-                { label: "E-mail", type: "email" },
-                { label: "Função", type: "text" },
-                { label: "Senha", type: "password" },
+                { label: "Nome Completo*", type: "text" },
+                { label: "Usuário*", type: "text" },
+                { label: "E-mail*", type: "email" },
+                { label: "Função*", type: "text" },
+                { label: "Senha*", type: "password" },
               ].map((field, index) => (
                 <div key={index}>
                   <label className="font-serif font-semibold mb-1 block">{field.label}</label>
