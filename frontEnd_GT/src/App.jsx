@@ -4,8 +4,11 @@ import { Footer } from './components/Footer';
 import './App.css'
 import './components/Footer/Footer.css'
 import Layout from './Layout'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/Register";
+import Recuperar from "./pages/Recuperar";
+import { Footer } from './components/Footer';
 import Contato from './pages/contato';
 import Associacoes from './pages/Associacoes';
 import Home from './pages/Home/home';
@@ -27,6 +30,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path='/associacoes' element={< Associacoes/>}/>
           <Route path='/home' element={< Home />}/>
+          <Route path="/recuperar" element={<Recuperar />} />
         </Routes>
       </Layout>
       <Footer/>
