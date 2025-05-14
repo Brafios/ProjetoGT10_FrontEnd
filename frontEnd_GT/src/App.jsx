@@ -3,7 +3,7 @@ import './App.css'
 import './components/Footer/Footer.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './Layout';
-import Home from "./pages/home";
+// import Home from "./pages/home";
 // import Associacao from "./pages/associacao";
 import Login from "./pages/login";
 import Register from "./pages/Register";
@@ -12,6 +12,7 @@ import { Footer } from './components/Footer';
 import Contato from './pages/contato';
 import Associacoes from './pages/Associacoes/index';
 import './App.css'
+import Home from './pages/Home/home';
 
 
 
@@ -26,7 +27,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={< Home />} />
           {/* <Route path="/associacao" element={<Associacao />} /> */}
           <Route path="/contato" element={<Contato />} />
           <Route path="/login" element={<Login />} />
