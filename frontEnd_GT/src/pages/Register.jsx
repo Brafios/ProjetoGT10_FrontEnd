@@ -25,8 +25,7 @@ export default function Register() {
               ].map((field, index) => (
                 
                 <div key={index}>
-                   <br />
-                  <label className="text-font-serif  font-semibold  block mb-1">{field.label} * </label> <br />
+                  <label className="text-font-serif  font-semibold  block mb-1">{field.label} * </label>
                   <input
                     type={field.type}
                     required
