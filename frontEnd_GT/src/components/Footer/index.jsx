@@ -10,27 +10,31 @@ import { Twitch } from 'lucide-react';
 export const Footer = () => {
     return (
         <div id="footer">
-            <div className="logo">
-                <img src="./src/assets/img/LogoCompleta.png" alt="Logo da FACC" />
+            <div id='div1'>
+                <div className="logo">
+                    <img src="./src/assets/img/LogoCompleta.png" alt="Logo da FACC" />
+                </div>
+
+                <div id="icones">
+                    <Instagram />
+                    <Facebook />
+                    <X />
+                    <Youtube />
+                    <Twitch />
+                </div>
+
             </div>
             <div id="content">
                 <div id="company">
-                    <div>
+                    <h1>Contato</h1>
                         <p>Endereço: Dr. João Moreira, 207, Fortaleza – CE</p>
                         <p>Cep: 60000-000</p>
-                    </div>
                     <p>Telefone: (85) 3252-2052</p>
                     <p>Horário de funcionamento: Das 8h às 17h, de segunda a sexta-feira.</p>
                     <p>Contato: email@email.org.br</p>
-                    <div id="icones">
-                        <Instagram />
-                        <Facebook />
-                        <X />
-                        <Youtube />
-                        <Twitch />
-                    </div>
                 </div>
                 <div id="sobre">
+                    <h1>Sobre</h1>
                     <a href="#">Sobre</a>
                     <a href="#">Associações</a>
                     <a href="#">Filia-se</a>
