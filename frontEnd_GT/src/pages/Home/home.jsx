@@ -1,3 +1,5 @@
+import './home.css'
+
 import { Search } from 'lucide-react';
 
 
@@ -6,7 +8,7 @@ export default function Home() {
         <div className="home">
             <div className="side-bar">
                 <div className="input">
-                    <Search style={{position: 'absolute', left: '220px', color:'grey'}}/>
+                    <Search style={{position: 'absolute', left: '150px', color:'grey'}}/>
                     <input type="text" name="" id="" />
                 </div>
                 <div className="itens">
@@ -67,7 +69,7 @@ export default function Home() {
                     <div className="adsense"></div>
                 </div>
                 <div className="parcerias">
-                    <h1>Últimas notícias</h1>
+                    <h1>Parcerias</h1>
                     <div className="grid-parcerias">
                         <div className="parceria">
                             <img src="#" alt="parceria 1"/>
