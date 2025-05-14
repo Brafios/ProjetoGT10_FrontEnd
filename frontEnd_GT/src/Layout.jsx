@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import logo from "./assets/img/LogoFACC.jpg"
+import logo from "./assets/img/LogoNome.png"
 
 import {
   Dialog,
@@ -20,7 +20,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const products = [
-    { name: 'Filiadas', description: '', href: '/associacao' }
+    { name: 'Filiadas', description: '', href: '/associacoes' }
   ]
 
 export default function Layout({ children }) {
@@ -35,7 +35,7 @@ export default function Layout({ children }) {
             <img
               alt=""
               src={logo}
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </a>
         </div>
