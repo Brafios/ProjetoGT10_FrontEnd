@@ -5,6 +5,7 @@ import Layout from './Layout'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import Register from "./pages/Register";
+import Recuperar from "./pages/Recuperar";
 import { Footer } from './components/Footer';
 // import Meunome from  "./pages/Register";
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/recuperar" element={<Recuperar />} />
         </Routes>
       </Layout>
     </BrowserRouter>
