@@ -9,7 +9,10 @@ import Register from "./pages/Register";
 import { Footer } from './components/Footer';
 // import Meunome from  "./pages/Register";
 import Contato from './pages/contato';
+import Associacoes from './pages/Associacoes';
 import './App.css'
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +28,7 @@ function App() {
           <Route path="/contato" element={<Contato />} />
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path='/associacoes' element/>
+          <Route path='/associacoes' element={< Associacoes/>}/>
         </Routes>
       </Layout>
       <Footer/>
