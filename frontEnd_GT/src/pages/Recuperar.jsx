@@ -1,7 +1,25 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const mockUsers = [
+  
+];
+
 export default function Recuperar(){
+    const [email, setEmail] = useState("");
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        const foundUser = mockUsers.find(
+          (user) => user.email === email 
+        );
+        if (foundUser) {
+          alert("Email de recuperação enviado");
+          navigate("/"); // rota a ser criada no desafio
+        } else {
+          alert("Email não encontrado");
+        }
+      };
 
     return(
         <div className="h-screen w-screen bg-white flex justify-center items-center">
