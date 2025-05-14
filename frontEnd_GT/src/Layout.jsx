@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Login from "./pages/login";
 import logo from "./assets/img/LogoFACC.jpg"
 
 import {
@@ -27,7 +28,7 @@ export default function Layout({ children }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     return (
       <>
-        <header className="bg-white">
+        <header className="bg-black">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
@@ -52,12 +53,12 @@ export default function Layout({ children }) {
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 no-underline">
+          <a href="#" className="text-sm/6 font-semibold text-white no-underline">
             Sobre
           </a>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
               Associações
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -87,21 +88,21 @@ export default function Layout({ children }) {
             </PopoverPanel>
           </Popover>
 
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 no-underline">
+          <a href="#" className="text-sm/6 font-semibold text-white no-underline">
             Filia-se
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 no-underline">
+          <a href="#" className="text-sm/6 font-semibold text-white no-underline">
             Benefícios
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 no-underline">
+          <a href="#" className="text-sm/6 font-semibold text-white no-underline">
             Notícias
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 no-underline">
+          <a href="#" className="text-sm/6 font-semibold text-white no-underline">
             Contato
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900 no-underline">
+          <a href="/" className="text-sm/6 font-semibold text-white no-underline">
             Login <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
