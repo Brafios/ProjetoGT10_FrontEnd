@@ -26,7 +26,7 @@ export default function Header(){
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return(
-        
+
         <div className="bg-gray-700">
               <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
                 <div className="flex lg:flex-1">
@@ -44,7 +44,7 @@ export default function Header(){
         
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
         
-                  <a href="#" className="text-sm/6 font-semibold text-white no-underline">
+                  <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">
                     Sobre
                   </a>
         
@@ -70,13 +70,13 @@ export default function Header(){
                     </PopoverPanel>
                   </Popover>
         
-                  <a href="#" className="text-sm/6 font-semibold text-white no-underline">
+                  <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">
                     Filia-se
                   </a>
-                  <a href="#" className="text-sm/6 font-semibold text-white no-underline">
+                  <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">
                     Benefícios
                   </a>
-                  <a href="#" className="text-sm/6 font-semibold text-white no-underline">
+                  <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">
                     Notícias
                   </a>
                   <a href="/contato" className="text-sm/6 font-semibold text-white no-underline">
@@ -106,7 +106,7 @@ export default function Header(){
                     <div className="-my-6 divide-y divide-gray-500/10">
                       <div className="space-y-2 py-6">
         
-                        <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                        <a href="/em-construcao" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                           Sobre
                         </a>
         
@@ -124,13 +124,13 @@ export default function Header(){
                           </DisclosurePanel>
                         </Disclosure>
         
-                        <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                        <a href="/em-construcao" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                           Filia-se
                         </a>
-                        <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                        <a href="/em-construcao" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                           Benefícios
                         </a>
-                        <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                        <a href="/em-construcao" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                           Notícias
                         </a>
                         <a href="/contato" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">

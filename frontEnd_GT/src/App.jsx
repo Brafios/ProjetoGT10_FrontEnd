@@ -4,13 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './Layout';
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Recuperar from "./pages/Recuperar";
-import Contato from './pages/contato';
+import Contato from './pages/Contato';
 import Associacoes from './pages/Associacoes';
-import Home from './pages/Home/home';
-
+import Home from './pages/Home';
+import EmConstrucao from './pages/EmConstrucao';
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path='/associacoes' element={< Associacoes/>}/>
           <Route path="/recuperar" element={<Recuperar />} />
+          <Route path="/em-construcao" element={<EmConstrucao />} />
         </Routes>
       </Layout>
     </BrowserRouter>

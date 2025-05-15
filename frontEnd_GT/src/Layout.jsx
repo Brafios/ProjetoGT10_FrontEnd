@@ -1,15 +1,22 @@
-import { useState } from 'react'
+import { useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
 
 export default function Layout({ children }) {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const location = useLocation();
+
+  const rotasSemLayout = ['/em-construcao'];
+
+  const esconderLayout = rotasSemLayout.includes(location.pathname);  
+    
+
     return (
       <>
-        <Header/>
+        {!esconderLayout && <Header />}
         <main>{children}</main>
-        <Footer/>
+        {!esconderLayout && <Footer />}
       </>
     );
   }

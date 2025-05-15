@@ -39,20 +39,20 @@ export default function Footer() {
 
         <div className="flex flex-col gap-[3px] w-[250px] h-[75%] text-left">
           <h1 className="text-[25px]">Sobre</h1>
-          <a href="#">Sobre</a>
+          <a href="/em-construcao">Sobre</a>
           <a href="#">Associações</a>
-          <a href="#">Filia-se</a>
-          <a href="#">Serviços</a>
+          <a href="/em-construcao">Filia-se</a>
+          <a href="/em-construcao">Serviços</a>
           <a href="#">Contato</a>
         </div>
 
         <div className="flex flex-col gap-[3px] w-[250px] h-[75%]">
           <h1 className="text-[25px]">Support</h1>
-          <a href="#">Central de ajuda</a>
-          <a href="#">Termos de serviços</a>
-          <a href="#">Jurídico</a>
-          <a href="#">Políticas de privacidade</a>
-          <a href="#">Status</a>
+          <a href="/em-construcao">Central de ajuda</a>
+          <a href="/em-construcao">Termos de serviços</a>
+          <a href="/em-construcao">Jurídico</a>
+          <a href="/em-construcao">Políticas de privacidade</a>
+          <a href="/em-construcao">Status</a>
         </div>
       </div>
     </div>
