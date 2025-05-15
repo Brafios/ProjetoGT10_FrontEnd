@@ -1,98 +1,94 @@
-// import { useState } from "react";
-// import emailjs from "emailjs-com";
+import { Search } from 'lucide-react';
+import ImageCarousel from "../components/ImageCarousel";
 
-// const initialState = {
-//   name: "",
-//   email: "",
-//   message: "",
-// };
-// export default function Home (props) {
-//   const [{ name, email, message }, setState] = useState(initialState);
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setState((prevState) => ({ ...prevState, [name]: value }));
-//   };
-//   const clearState = () => setState({ ...initialState });
-  
-  
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log(name, email, message);
-    
-//     {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
-//     emailjs
-//       .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
-//       .then(
-//         (result) => {
-//           console.log(result.text);
-//           clearState();
-//         },
-//         (error) => {
-//           console.log(error.text);
-//         }
-//       );
-//   };
-//   return (
-//     <div className="h-screen w-screen bg-white flex justify-center items-center">
-//       <div className="flex flex-col items-center w-screen">
-//         <div className="flex flex-col justify-center items-center w-[750px] bg-gray-300 p-8 rounded">
-//           <h2 className="text-3xl text-center font-bold font-serif mb-6">Home Provisorio</h2>
-//           <p className="text-center font-serif mb-6">
-//           Utilize o formulário abaixo para se comunicar com a Federação das Associações Comerciais do Ceará (FACC).
-//           </p>
-      
-//           <form name="sentMessage" validate onSubmit={handleSubmit} className="flex flex-col w-[400px]">
-//             <label className="font-serif font-semibold mb-1">Nome</label>
-//             <input
-//             type="text"
-//             id="name"
-//             name="name"
-//             className="bg-white text-center h-10 mb-4 rounded"
-//             required
-//             onChange={handleChange}
-//             />
-
-//             <label className="font-serif font-semibold mb-1">Email</label>
-//             <input
-//             type="email"
-//             id="email"
-//             name="email"
-//             className="bg-white text-center h-10 mb-4 rounded"
-//             required
-//             onChange={handleChange}
-//             />
-
-//         <label className="font-serif font-semibold mb-1">Telefone</label>
-//         <input
-//           type="phone"
-//           id="phone"
-//           name="phone"
-//           className="bg-white text-center h-10 mb-4 rounded"
-//           required
-//           onChange={handleChange}
-//         />
-
-//         <label className="font-serif font-semibold mb-1">Mensagem</label>
-//         <textarea
-//           name="message"
-//           id="message"
-//           className="bg-white text-center h-24 mb-4 rounded"
-//           required
-//           onChange={handleChange}
-//         ></textarea>
-
-//         <button
-//           type="submit"
-//           className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
-//         >
-//           Enviar
-//         </button>
-//       </form>
-//     </div>
-//   </div>
-// </div>
-
-//   );
-// };
+export default function Home() {
+    return(
+        
+        <div className="home">
+            <div className="side-bar">
+                <div className="input">
+                    <Search style={{position: 'absolute', left: '220px', color:'grey'}}/>
+                    <input type="text" name="" id="" />
+                </div>
+                <div className="itens">
+                    <div className="socios">Associação 01</div>
+                    <div className="socios">Associação 2</div>
+                    <div className="socios">Associação 3</div>
+                    <div className="socios">Associação 4</div>
+                    <div className="socios">Associação 5</div>
+                    <div className="socios">Associação 6</div>
+                    <div className="socios">Associação 7</div>
+                    <div className="socios">Associação 8</div>
+                    <div className="socios">Associação 9</div>
+                    <div className="socios">Associação 10</div>
+                </div>
+            </div>
+            <div className="copro-home">
+                <div className="p-4">
+                    <ImageCarousel />
+                </div>
+                <div className="noticias">
+                    <h1>Últimas notícias</h1>
+                    <div className="grid-noticias">
+                        <div className="noticia">
+                            <img src="#" alt="noticia 1"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="noticia">
+                            <img src="#" alt="noticia 2"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="noticia">
+                            <img src="#" alt="noticia 3"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="noticia">
+                            <img src="#" alt="noticia 4"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="noticia">
+                            <img src="#" alt="noticia 5"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="noticia">
+                            <img src="#" alt="noticia 6"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                    </div>
+                    <button>Mais notícias</button>
+                    <div className="adsense"></div>
+                </div>
+                <div className="parcerias">
+                    <h1>Últimas notícias</h1>
+                    <div className="grid-parcerias">
+                        <div className="parceria">
+                            <img src="#" alt="parceria 1"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="parceria">
+                            <img src="#" alt="parceria 2"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="parceria">
+                            <img src="#" alt="parceria 3"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="parceria">
+                            <img src="#" alt="parceria 4"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="parceria">
+                            <img src="#" alt="parceria 5"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                        <div className="parceria">
+                            <img src="#" alt="parceria 6"/>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
+                        </div>
+                    </div>
+                    <button>Mais parceiros</button>
+                </div>
+            </div>
+        </div>
+    )
+}
