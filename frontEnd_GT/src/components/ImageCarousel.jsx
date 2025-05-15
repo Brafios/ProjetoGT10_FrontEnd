@@ -15,21 +15,21 @@ export default function ImageCarousel() {
       perView: 1,
     },
     autoplay: {
-      delay: 3000,
+      delay: 2500,
       stopOnInteraction: false,
     },
     created(slider) {
       setInterval(() => {
         slider.next();
-      }, 3000);
+      }, 2500);
     }
   });
 
   return (
-    <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden">
+    <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden w-[100%]">
       {images.map((src, index) => (
-        <div key={index} className="keen-slider__slide">
-          <img src={src} alt={`slide-${index}`} className="w-[900px] h-[500px] object-cover" />
+        <div key={index} className="keen-slider__slide ">
+          <img src={src} alt={`slide-${index}`} className="w-[100%] h-[500px]" />
         </div>
       ))}
     </div>

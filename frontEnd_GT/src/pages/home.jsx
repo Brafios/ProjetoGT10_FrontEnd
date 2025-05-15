@@ -4,13 +4,13 @@ import ImageCarousel from "../components/ImageCarousel";
 export default function Home() {
     return(
         
-        <div className="flex">
-            <div className="side-bar">
-                <div className="input">
-                    <Search style={{position: 'absolute', left: '50px', color:'grey'}}/>
-                    <input type="text" name="" id="" />
+        <div className="flex w-screen h-screen">
+            <div className="side-bar w-[15%] mt-4 mx-3">
+                <div className="relative w-full max-w-[400px] mb-8">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                    <input type="text" placeholder="Pesquisar por associação..." className="w-full pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
                 </div>
-                <div className="ml-12">
+                <div className="ml-12 ">
                     <div className="socios text-2xl">Associação 1</div>
                     <div className="socios text-2xl">Associação 2</div>
                     <div className="socios text-2xl">Associação 3</div>
@@ -23,7 +23,7 @@ export default function Home() {
                     <div className="socios text-2xl">Associação 10</div>
                 </div>
             </div>
-            <div className="copro-home">
+            <div className="copro-home w-[70%]">
                 <div className="p-4">
                     <ImageCarousel />
                 </div>
@@ -99,6 +99,7 @@ export default function Home() {
                     <button>Mais parceiros</button>
                 </div>
             </div>
+            <div className="ads w-[15%]"></div>
         </div>
     )
 }
