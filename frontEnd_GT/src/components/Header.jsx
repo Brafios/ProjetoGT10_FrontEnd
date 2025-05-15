@@ -34,7 +34,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">FACC</span>
-            <img alt="Logo" src={logo} className="h-10 w-auto" />
+            <img alt="Logo" src={logo} className="h-20 w-auto" />
           </a>
         </div>
 
@@ -50,10 +50,11 @@ export default function Header() {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">Sobre</a>
+          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">
+          Sobre</a>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-white">
+            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-white">
               Associações
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -62,7 +63,7 @@ export default function Header() {
                 {products.map((item) => (
                   <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900 no-underline">
+                      <a href={item.href} className="block font-semibold text-gray-900 no-underline text-lg">
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -73,10 +74,10 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">Filia-se</a>
-          <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">Benefícios</a>
-          <a href="/em-construcao" className="text-sm/6 font-semibold text-white no-underline">Notícias</a>
-          <a href="/contato" className="text-sm/6 font-semibold text-white no-underline">Contato</a>
+          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Filia-se</a>
+          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Benefícios</a>
+          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Notícias</a>
+          <a href="/contato" className="text-lg font-semibold text-white no-underline">Contato</a>
         </PopoverGroup>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -105,7 +106,7 @@ export default function Header() {
               </Menu.Items>
             </Menu>
           ) : (
-            <a href="/login" className="text-sm/6 font-semibold text-black no-underline bg-white rounded-sm p-2">
+            <a href="/login" className="text-sm/6 text-lg font-semibold text-black no-underline bg-white rounded-sm p-2">
               Login
             </a>
           )}
