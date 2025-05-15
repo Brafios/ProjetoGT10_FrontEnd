@@ -1,22 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "./AuthContext"; 
 
-const mockUsers = [
-  
-];
+const mockUsers = [{ email: "geraçao@tech.com", password: "GT10" }];
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth(); // pega o login do contexto
 
   const handleLogin = () => {
     const foundUser = mockUsers.find(
       (user) => user.email === email && user.password === password
     );
     if (foundUser) {
-      alert("Login bem-sucedido!");
-      navigate("/home"); // rota a ser criada no desafio
+      login(foundUser); // salva usuário no contexto
+      navigate("/");
     } else {
       alert("Credenciais inválidas.");
     }
