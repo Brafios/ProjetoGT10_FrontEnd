@@ -81,10 +81,14 @@ export default function Register() {
               <button
                 type="submit"
                 className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
+                className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
               >
+                Cadastrar
                 Cadastrar
               </button>
 
+              <p className="mt-4 text-center">
+                Já tem conta? <Link to="/" className="font-bold text-blue-600">Entrar</Link>
               <p className="mt-4 text-center">
                 Já tem conta? <Link to="/" className="font-bold text-blue-600">Entrar</Link>
               </p>
