@@ -5,39 +5,34 @@ import { Instagram, Facebook, X, Youtube, Twitch } from 'lucide-react';
 export default function Footer() {
 
   return (
-    <div
-      id="footer"
-      className="bg-[#263238] text-white flex p-5 h-[240px] gap-[100px] text-xs"
-    >
-      <div className="flex flex-col items-center gap-2 w-1/4">
-        <div className="w-[95%] h-[95%] m-auto flex justify-center">
-          <img
-            src="./src/assets/img/LogoSimples.png"
-            alt="Logo da FACC"
-            className="w-1/2"
-          />
-        </div>
+    <div id="footer" className="bg-[#263238] text-white flex px-60  h-[300px] gap-[10px] text-xs align">
+      <div className="flex items-center gap-[20px] h-full w-full ">
+        <div className="flex flex-col items-center gap-2 w-[34%] ">
+          <div className="w-[95%] h-[95%] m-auto flex justify-center">
+            <img
+              src="./src/assets/img/LogoSimples.png"
+              alt="Logo da FACC"
+              className="w-1/2"
+            />
+          </div>
 
-        <div className="flex justify-center gap-5">
-          <Instagram />
-          <Facebook />
-          <X />
-          <Youtube />
-          <Twitch />
+          <div className="flex justify-center gap-5">
+            <Instagram />
+            <Facebook />
+            <X />
+            <Youtube />
+            <Twitch />
+          </div>
         </div>
-      </div>
-
-      <div className="flex items-center gap-[100px] h-full w-3/4">
-        <div className="flex flex-col gap-[3px] w-[250px] h-[75%]">
+        <div className="flex flex-col gap-[3px] w-[22%] h-[75%] mt-10">
           <h1 className="text-[25px]">Contato</h1>
-          <p className="leading-[12px] my-[5px]">Endereço: Dr. João Moreira, 207, Fortaleza – CE</p>
-          <p className="leading-[12px] my-[5px]">Cep: 60000-000</p>
-          <p className="leading-[12px] my-[5px]">Telefone: (85) 3252-2052</p>
-          <p className="leading-[12px] my-[5px]">Horário de funcionamento: Das 8h às 17h, de segunda a sexta-feira.</p>
-          <p className="leading-[12px] my-[5px]">Contato: email@email.org.br</p>
+          <p className="leading-[12px] my-[5px]"><strong>Endereço:</strong> <br /> Dr. João Moreira, 207, Fortaleza. <br />Ceará - Cep: 60000-000 <br /><strong>Telefone:</strong>  (85) 3252-2052</p>
+          {/* <p className="leading-[12px] my-[5px]"><strong>Telefone:</strong>  (85) 3252-2052</p> */}
+          <p className="leading-[12px] my-[5px]"><strong>Horário de funcionamento:</strong> <br /> Das 8h às 17h, de segunda a sexta-feira.</p>
+          <p className="leading-[12px] my-[5px]"><strong>E-mail:</strong> email@email.org.br</p>
         </div>
 
-        <div className="flex flex-col gap-[3px] w-[250px] h-[75%] text-left">
+        <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%] text-left">
           <h1 className="text-[25px]">Sobre</h1>
           <a href="/em-construcao">Sobre</a>
           <a href="#">Associações</a>
@@ -46,7 +41,7 @@ export default function Footer() {
           <a href="#">Contato</a>
         </div>
 
-        <div className="flex flex-col gap-[3px] w-[250px] h-[75%]">
+        <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%]">
           <h1 className="text-[25px]">Support</h1>
           <a href="/em-construcao">Central de ajuda</a>
           <a href="/em-construcao">Termos de serviços</a>
