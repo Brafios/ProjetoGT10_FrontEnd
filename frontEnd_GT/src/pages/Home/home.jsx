@@ -5,7 +5,7 @@ import { Search } from 'lucide-react';
 
 export default function Home() {
     return(
-        <div className="home">
+        <div className="home flex">
             <div className="side-bar">
                 <div className="input">
                     <Search style={{position: 'absolute', left: '150px', color:'grey'}}/>
