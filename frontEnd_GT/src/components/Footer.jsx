@@ -5,7 +5,7 @@ import { Instagram, Facebook, X, Youtube, Twitch } from 'lucide-react';
 export default function Footer() {
 
   return (
-    <div id="footer" className="bg-[#263238] text-white flex px-60  h-[300px] gap-[10px] text-xs align">
+    <div id="footer" className="bg-[#263238] text-white flex px-60  h-[300px] gap-[10px] text-sm align">
       <div className="flex items-center gap-[20px] h-full w-full ">
         <div className="flex flex-col items-center gap-2 w-[34%] ">
           <div className="w-[95%] h-[95%] m-auto flex justify-center">
@@ -26,10 +26,10 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-[3px] w-[22%] h-[75%] mt-10">
           <h1 className="text-[25px]">Contato</h1>
-          <p className="leading-[12px] my-[5px]"><strong>Endereço:</strong> <br /> Dr. João Moreira, 207, Fortaleza. <br />Ceará - Cep: 60000-000 <br /><strong>Telefone:</strong>  (85) 3252-2052</p>
-          {/* <p className="leading-[12px] my-[5px]"><strong>Telefone:</strong>  (85) 3252-2052</p> */}
-          <p className="leading-[12px] my-[5px]"><strong>Horário de funcionamento:</strong> <br /> Das 8h às 17h, de segunda a sexta-feira.</p>
-          <p className="leading-[12px] my-[5px]"><strong>E-mail:</strong> email@email.org.br</p>
+          <p className="leading-[12px] my-[3px]"><strong>Endereço:</strong> <br /> Dr. João Moreira, 207, Fortaleza. <br />Ceará - Cep: 60000-000 </p>
+          <p className="leading-[12px] my-[3px]"><strong>Telefone:</strong>  (85) 3252-2052</p>
+          <p className="leading-[12px] my-[3px]"><strong>Horário de funcionamento:</strong> <br /> De segunda a sexta, das 8h às 17h.</p>
+          <p className="leading-[12px] my-[3px]"><strong>E-mail:</strong> email@email.org.br</p>
         </div>
 
         <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%] text-left">
