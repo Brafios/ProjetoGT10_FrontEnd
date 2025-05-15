@@ -27,35 +27,35 @@ export default function Home() {
                 <div className="p-4">
                     <ImageCarousel />
                 </div>
-                <div className="p-4 noticias">
+                <div className="p-4">
                     <h1>Últimas notícias</h1>
-                    <div className="columns-3">
+                    <div className="flex flex-wrap">
                         <div className='flex'>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_noticia_1.jpg" alt="noticia 1" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_noticia_1.jpg" alt="noticia 1" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_noticia_2.jpg" alt="noticia 2" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_noticia_2.jpg" alt="noticia 2" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_noticia_3.jpg" alt="noticia 3" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_noticia_3.jpg" alt="noticia 3" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
                         
                         <div className='flex'>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_noticia_1.jpg" alt="noticia 4" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_noticia_1.jpg" alt="noticia 4" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_noticia_2.jpg" alt="noticia 5" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_noticia_2.jpg" alt="noticia 5" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_noticia_3.jpg" alt="noticia 6" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_noticia_3.jpg" alt="noticia 6" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
@@ -63,35 +63,35 @@ export default function Home() {
                     <button>Mais notícias</button>
                     <div className="adsense"></div>
                 </div>
-                <div className="p-4 parcerias">
+                <div className="p-4">
                     <h1>Parcerias</h1>
-                    <div className="columns-3">
+                    <div className="flex flex-wrap">
                         <div className='flex'>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_beneficios_1.jpg" alt="parceria 1" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_beneficios_1.jpg" alt="parceria 1" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_beneficios_2.jpg" alt="parceria 2" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_beneficios_2.jpg" alt="parceria 2" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_beneficios_3.jpg" alt="parceria 3" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_beneficios_3.jpg" alt="parceria 3" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
 
-                        <div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_beneficios_1.jpg" alt="parceria 4" className='w-[50%]'/>
+                        <div className='flex'>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_beneficios_1.jpg" alt="parceria 4" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_beneficios_2.jpg" alt="parceria 5" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_beneficios_2.jpg" alt="parceria 5" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
-                            <div className="w-[30%]">
-                                <img src="./src/assets/img/img_beneficios_3.jpg" alt="parceria 6" className='w-[50%]'/>
+                            <div className="w-[10%]">
+                                <img src="./src/assets/img/img_beneficios_3.jpg" alt="parceria 6" className='w-[80%]'/>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
