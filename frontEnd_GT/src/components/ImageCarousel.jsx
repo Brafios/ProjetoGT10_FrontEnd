@@ -29,7 +29,7 @@ export default function ImageCarousel() {
     <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden">
       {images.map((src, index) => (
         <div key={index} className="keen-slider__slide">
-          <img src={src} alt={`slide-${index}`} className="w-full h-64 object-cover" />
+          <img src={src} alt={`slide-${index}`} className="w-[900px] h-[500px] object-cover" />
         </div>
       ))}
     </div>
