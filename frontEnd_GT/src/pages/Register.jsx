@@ -24,7 +24,7 @@ export default function Register() {
 
             <form className="flex flex-col w-[400px] gap-4" onSubmit={handleSubmit}>
               <div>
-                <label className="font-serif font-semibold mb-1 block">Nome Completo</label>
+                <label className="font-serif font-semibold mb-1 block">Nome Completo*</label>
                 <input
                   type="text"
                   value={nome}
@@ -35,7 +35,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">Usuário</label>
+                <label className="font-serif font-semibold mb-1 block">Usuário*</label>
                 <input
                   type="text"
                   value={usuario}
@@ -46,7 +46,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">E-mail</label>
+                <label className="font-serif font-semibold mb-1 block">E-mail*</label>
                 <input
                   type="email"
                   value={email}
@@ -57,7 +57,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">Função</label>
+                <label className="font-serif font-semibold mb-1 block">Função*</label>
                 <input
                   type="text"
                   value={funcao}
@@ -68,7 +68,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">Senha</label>
+                <label className="font-serif font-semibold mb-1 block">Senha*</label>
                 <input
                   type="password"
                   value={senha}
@@ -81,14 +81,11 @@ export default function Register() {
               <button
                 type="submit"
                 className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
-                className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
+                
               >
-                Cadastrar
                 Cadastrar
               </button>
 
-              <p className="mt-4 text-center">
-                Já tem conta? <Link to="/" className="font-bold text-blue-600">Entrar</Link>
               <p className="mt-4 text-center">
                 Já tem conta? <Link to="/" className="font-bold text-blue-600">Entrar</Link>
               </p>
