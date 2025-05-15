@@ -1,8 +1,9 @@
 import { Search } from 'lucide-react';
-
+import ImageCarousel from "../components/ImageCarousel";
 
 export default function Home() {
     return(
+        
         <div className="home">
             <div className="side-bar">
                 <div className="input">
@@ -23,17 +24,8 @@ export default function Home() {
                 </div>
             </div>
             <div className="copro-home">
-                <div className="carrossel">
-                    <div className="img-carrossel">
-                        <img src="#" alt="image 01" />
-                        <img src="#" alt="image 02" />
-                        <img src="#" alt="image 03" />
-                    </div>
-                    <div className="btn-carrossel">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                    </div>
+                <div className="p-4">
+                    <ImageCarousel />
                 </div>
                 <div className="noticias">
                     <h1>Últimas notícias</h1>
