@@ -16,7 +16,7 @@ export default function Footer() {
             />
           </div>
 
-          <div className="flex justify-center gap-5">
+          <div className="flex justify-center gap-4">
             <Instagram />
             <Facebook />
             <X />
