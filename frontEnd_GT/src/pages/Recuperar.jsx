@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const mockUsers = [
-  
+  { email: "geraçao@tech.com"}
 ];
 
 export default function Recuperar(){
@@ -15,7 +15,7 @@ export default function Recuperar(){
         );
         if (foundUser) {
           alert("Email de recuperação enviado");
-          navigate("/"); // rota a ser criada no desafio
+          navigate("/login");
         } else {
           alert("Email não encontrado");
         }
