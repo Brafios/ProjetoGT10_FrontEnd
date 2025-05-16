@@ -1,6 +1,6 @@
 
 import { Instagram, Facebook, X, Youtube, Twitch } from 'lucide-react';
-
+import logo from '../assets/img/LogoSimples.png'
 
 export default function Footer() {
 
@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-2 w-[34%] ">
           <div className="w-[95%] h-[95%] m-auto flex justify-center">
             <img
-              src="./src/assets/img/LogoSimples.png"
+              src={logo}
               alt="Logo da FACC"
               className="w-1/2"
             />
@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%] text-left">
           <h1 className="text-[25px]">Sobre</h1>
           <a href="/em-construcao">Sobre</a>
-          <a href="#">Associações</a>
+          <a href="/associacoes">Associações</a>
           <a href="/em-construcao">Filia-se</a>
           <a href="/em-construcao">Serviços</a>
           <a href="#">Contato</a>
