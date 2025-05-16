@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-[3px] w-[22%] h-[75%] mt-10">
           <h1 className="text-[25px]">Contato</h1>
-          <p className="leading-[12px] my-[3px]"><strong>Endereço:</strong> <br /> Dr. João Moreira, 207, Fortaleza. <br />Ceará - Cep: 60000-000 </p>
+          <p className="leading-[12px] my-[3px]"><strong>Endereço:</strong> <br />Rua Dr. João Moreira, 207, Centro. <br />Fortaleza, Ceará - Cep: 60000-000 </p>
           <p className="leading-[12px] my-[3px]"><strong>Telefone:</strong>  (85) 3252-2052</p>
           <p className="leading-[12px] my-[3px]"><strong>Horário de funcionamento:</strong> <br /> De segunda a sexta, das 8h às 17h.</p>
           <p className="leading-[12px] my-[3px]"><strong>E-mail:</strong> email@email.org.br</p>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%]">
-          <h1 className="text-[25px]">Support</h1>
+          <h1 className="text-[25px]">Suporte</h1>
           <a href="/em-construcao">Central de ajuda</a>
           <a href="/em-construcao">Termos de serviços</a>
           <a href="/em-construcao">Jurídico</a>
