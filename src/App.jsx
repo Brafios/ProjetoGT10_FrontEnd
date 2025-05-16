@@ -5,7 +5,7 @@ import Layout from './Layout';
 import Login from "./pages/login";
 import Register from "./pages/Register";
 import Recuperar from "./pages/Recuperar";
-import Contato from "./pages/Contato";
+import Contato from "./pages/contato";
 import Associacoes from "./pages/Associacoes";
 import Home from "./pages/home";
 import EmConstrucao from "./pages/EmConstrucao";
