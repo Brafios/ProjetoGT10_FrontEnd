@@ -4,18 +4,29 @@ import './App.css'
 import Layout from './Layout';
 import Login from "./pages/login";
 import Register from "./pages/Register";
-import { Footer } from './components/Footer';
-// import Meunome from  "./pages/Register";
+import Recuperar from "./pages/Recuperar";
+import Contato from "./pages/Contato";
+import Associacoes from "./pages/Associacoes";
+import Home from "./pages/home";
+import EmConstrucao from "./pages/EmConstrucao";
+import { AuthProvider } from "./pages/AuthContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Layout>
+      <AuthProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/associacoes" element={<Associacoes />} />
+            <Route path="/recuperar" element={<Recuperar />} />
+            <Route path="/em-construcao" element={<EmConstrucao />} />
+          </Routes>
+        </Layout>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
