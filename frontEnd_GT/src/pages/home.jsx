@@ -21,16 +21,16 @@ export default function Home() {
                     <input type="text" placeholder="Pesquisar" className="w-[80%] pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
                 </div>
                 <div className="w-full flex flex-col text-center">
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #1b1c1c">Associação 1</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 2</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 3</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 4</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 5</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 6</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 7</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 8</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 9</div>
-                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 10</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 1</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 2</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 3</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 4</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 5</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 6</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 7</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 8</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 9</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 10</div>
                 </div>
             </div>
             <div className=" w-[70%]">
