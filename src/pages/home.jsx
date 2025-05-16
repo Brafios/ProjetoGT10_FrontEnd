@@ -2,6 +2,13 @@ import { Search } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 import ImageCarousel from "../components/ImageCarousel";
 
+import noticia1 from '../assets/img/img_noticia_1.jpg';
+import noticia2 from '../assets/img/img_noticia_2.jpg';
+import noticia3 from '../assets/img/img_noticia_3.jpg';
+import benf1 from '../assets/img/img_beneficios_1.jpg';
+import benf2 from '../assets/img/img_beneficios_2.jpg';
+import benf3 from '../assets/img/img_beneficios_3.jpg';
+
 export default function Home() {
 
     const navegate = useNavigate()
@@ -45,30 +52,30 @@ export default function Home() {
                     <div className="grid mt-6">
                         <div className='flex grid-cols-3 gap-20'>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_noticia_1.jpg" alt="noticia 1" className='w-[100%] rounded-md'/>
+                                <img src={noticia1} alt="noticia 1" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%] justify-items-center">
-                                <img src="./src/assets/img/img_noticia_2.jpg" alt="noticia 2" className='w-[100%] rounded-md'/>
+                                <img src={noticia2} alt="noticia 2" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_noticia_3.jpg" alt="noticia 3" className='w-[100%] rounded-md'/>
+                                <img src={noticia3} alt="noticia 3" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
                         
                         <div className='flex grid-cols-3 gap-20 mt-9'>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_noticia_1.jpg" alt="noticia 4" className='w-[100%] rounded-md'/>
+                                <img src={noticia1} alt="noticia 4" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%] justify-items-center">
-                                <img src="./src/assets/img/img_noticia_2.jpg" alt="noticia 5" className='w-[100%] rounded-md'/>
+                                <img src={noticia2} alt="noticia 5" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_noticia_3.jpg" alt="noticia 6" className='w-[100%] rounded-md'/>
+                                <img src={noticia3} alt="noticia 6" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
@@ -92,30 +99,30 @@ export default function Home() {
                     <div className="grid mt-6">
                         <div className='flex grid-cols-3 gap-20'>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_beneficios_1.jpg" alt="parceria 1" className='w-[100%] rounded-md'/>
+                                <img src={benf1} alt="parceria 1" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_beneficios_2.jpg" alt="parceria 2" className='w-[100%] rounded-md'/>
+                                <img src={benf2} alt="parceria 2" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_beneficios_3.jpg" alt="parceria 3" className='w-[100%] rounded-md'/>
+                                <img src={benf3} alt="parceria 3" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
 
                         <div className='flex grid-cols-3 gap-20 mt-9'>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_beneficios_1.jpg" alt="parceria 4" className='w-[100%] rounded-md'/>
+                                <img src={benf1} alt="parceria 4" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_beneficios_2.jpg" alt="parceria 5" className='w-[100%] rounded-md'/>
+                                <img src={benf2} alt="parceria 5" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                             <div type='button' onClick={manutencao} className="w-[50%]">
-                                <img src="./src/assets/img/img_beneficios_3.jpg" alt="parceria 6" className='w-[100%] rounded-md'/>
+                                <img src={benf3} alt="parceria 6" className='w-[100%] rounded-md'/>
                                 <p className='mt-3 text-shadow-xs'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero, a quisquam voluptates cum repudiandae alias quibusdam quo odit ea beatae magnam cumque voluptas, laborum similique!</p>
                             </div>
                         </div>
