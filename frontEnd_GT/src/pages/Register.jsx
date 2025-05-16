@@ -20,11 +20,11 @@ export default function Register() {
       <main className="bg-white min-h-screen flex flex-col justify-between font-sans">
         <div className="flex flex-col justify-center items-center flex-1 py-10 bg-white">
           <div className="flex flex-col justify-center items-center w-[750px] bg-gray-300 p-8 rounded">
-            <h1 className="text-3xl text-center font-bold font-serif mb-6">Cadastro</h1>
+            <h1 className="text-3xl text-center font-bold font-sans mb-6">Cadastro</h1>
 
             <form className="flex flex-col w-[400px] gap-4" onSubmit={handleSubmit}>
               <div>
-                <label className="font-serif font-semibold mb-1 block">Nome Completo*</label>
+                <label className="font-sans font-semibold mb-1 block">Nome Completo*</label>
                 <input
                   type="text"
                   value={nome}
@@ -35,7 +35,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">Usuário*</label>
+                <label className="font-sans font-semibold mb-1 block">Usuário*</label>
                 <input
                   type="text"
                   value={usuario}
@@ -46,7 +46,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">E-mail*</label>
+                <label className="font-sans font-semibold mb-1 block">E-mail*</label>
                 <input
                   type="email"
                   value={email}
@@ -57,7 +57,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">Função*</label>
+                <label className="font-sans font-semibold mb-1 block">Função*</label>
                 <input
                   type="text"
                   value={funcao}
@@ -68,7 +68,7 @@ export default function Register() {
               </div>
 
               <div>
-                <label className="font-serif font-semibold mb-1 block">Senha*</label>
+                <label className="font-sans font-semibold mb-1 block">Senha*</label>
                 <input
                   type="password"
                   value={senha}

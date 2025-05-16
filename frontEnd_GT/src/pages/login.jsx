@@ -8,14 +8,14 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { login } = useAuth(); // pega o login do contexto
+  const { login } = useAuth(); 
 
   const handleLogin = () => {
     const foundUser = mockUsers.find(
       (user) => user.email === email && user.password === password
     );
     if (foundUser) {
-      login(foundUser); // salva usuário no contexto
+      login(foundUser); 
       navigate("/");
     } else {
       alert("Credenciais inválidas.");
@@ -27,10 +27,10 @@ export default function Login() {
     <div className="h-screen w-screen bg-white flex justify-center items-center">
       <div className="flex flex-col items-center w-screen">
         <div className="flex flex-col justify-center items-center w-[750px] h-[400px] bg-gray-300 p-8 rounded">
-          <h1 className="text-3xl text-center font-bold font-serif mb-6">Login</h1>
+          <h1 className="text-3xl text-center font-bold font-sans mb-6">Login</h1>
 
           <div className="flex flex-col w-[400px]">
-          <label className="font-serif font-semibold mb-1">Usuário ou E-mail</label>
+          <label className="font-sans font-semibold mb-1">Usuário ou E-mail</label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -58,8 +58,8 @@ export default function Login() {
             Entrar
           </button>
         </div>
-        <p className="mt-4">
-        Não tem conta? <a href="/register" className="font-bold">Cadastre-se</a>
+        <p className="mt-4 font-sans">
+        Não tem conta? <a href="/register" className="font-bold font-sans">Cadastre-se</a>
         </p>
       </div>
 

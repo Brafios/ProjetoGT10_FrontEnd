@@ -9,7 +9,7 @@ export default function Recuperar(){
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
 
-    const handleLogin = () => {
+    const handleRecuperar = () => {
         const foundUser = mockUsers.find(
           (user) => user.email === email 
         );
@@ -35,7 +35,7 @@ export default function Recuperar(){
                     className="bg-white text-center h-10 mb-4 rounded"
                     />
                     <button
-                    onClick={handleLogin}
+                    onClick={handleRecuperar}
                     className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
                     >
                     Confirmar

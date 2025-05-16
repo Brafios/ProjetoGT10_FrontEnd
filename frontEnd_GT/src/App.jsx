@@ -7,7 +7,7 @@ import Register from "./pages/Register";
 import Recuperar from "./pages/Recuperar";
 import Contato from "./pages/Contato";
 import Associacoes from "./pages/Associacoes";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import EmConstrucao from "./pages/EmConstrucao";
 import { AuthProvider } from "./pages/AuthContext";
 
