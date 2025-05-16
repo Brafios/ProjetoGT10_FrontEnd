@@ -10,14 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@tailwindcss/vite": "^4.1.6",
-    "firebase": "^11.7.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.0",
-    "tailwindcss": "^4.1.6"
-=======
     "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^2.2.0",
     "bootstrap": "^5.3.6",
@@ -25,7 +17,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.6.0"
->>>>>>> 73a13e1825e42c2f21ed25f167e6513462e4bf2b
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
