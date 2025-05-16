@@ -15,7 +15,7 @@ export default function Home() {
         
         
         <div className="flex">
-            <div className="side-bar justify-items-center mt-4 mx-2 w-[18%] h-[757px]">
+            <div className="side-bar justify-items-center mt-4 mx-2 w-[19%] h-[757px]">
                 <div className="relative w-full max-w-[100%] mb-9 ml-12">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
                     <input type="text" placeholder="Pesquisar" className="w-[80%] pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
@@ -33,7 +33,7 @@ export default function Home() {
                     <div className="socios flex justify-center items-center text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 10</div>
                 </div>
             </div>
-            <div className=" w-[64%]">
+            <div className=" w-[62%]">
                 <div className="p-4">
                     <ImageCarousel />
                 </div>
@@ -130,7 +130,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="ads w-[18%]"></div>
+            <div className="ads w-[19%]"></div>
         </div>
     )
 }
