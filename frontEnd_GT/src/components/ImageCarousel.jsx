@@ -10,6 +10,7 @@ const images = [img1, img2, img3, img4];
 
 export default function ImageCarousel() {
   const [sliderRef] = useKeenSlider({
+    spacing: 10,
     loop: true,
     renderMode: "performance",
     slides: {
@@ -27,7 +28,7 @@ export default function ImageCarousel() {
   });
 
   return (
-    <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden">
+    <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden w-full">
       {images.map((src, index) => (
         <div key={index} className="keen-slider__slide">
           <img src={src} alt={`slide-${index}`} className="w-full h-auto object-cover"/>

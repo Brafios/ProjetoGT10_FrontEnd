@@ -15,25 +15,25 @@ export default function Home() {
         
         
         <div className="flex">
-            <div className="side-bar justify-items-center mt-4 mx-4 w-[35%]">
+            <div className="side-bar justify-items-center mt-4 mx-2 w-[15%] h-[757px]">
                 <div className="relative w-full max-w-[100%] mb-9 ml-12">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
                     <input type="text" placeholder="Pesquisar" className="w-[80%] pl-10 pr-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
                 </div>
-                <div className="ml-5">
-                    <div className="socios text-2xl">Associação 1</div>
-                    <div className="socios text-2xl">Associação 2</div>
-                    <div className="socios text-2xl">Associação 3</div>
-                    <div className="socios text-2xl">Associação 4</div>
-                    <div className="socios text-2xl">Associação 5</div>
-                    <div className="socios text-2xl">Associação 6</div>
-                    <div className="socios text-2xl">Associação 7</div>
-                    <div className="socios text-2xl">Associação 8</div>
-                    <div className="socios text-2xl">Associação 9</div>
-                    <div className="socios text-2xl">Associação 10</div>
+                <div className="w-full flex flex-col text-center">
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #1b1c1c">Associação 1</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 2</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 3</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 4</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 5</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 6</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 7</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 8</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 9</div>
+                    <div className="socios text-2xl h-[67px] border-b-4 border-color: #C9CCCD">Associação 10</div>
                 </div>
             </div>
-            <div className="ml-2 w-[75%]">
+            <div className=" w-[70%]">
                 <div className="p-4">
                     <ImageCarousel />
                 </div>
@@ -130,7 +130,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="ads w-[35%]"></div>
+            <div className="ads w-[15%]"></div>
         </div>
     )
 }
