@@ -38,7 +38,7 @@ export default function Footer() {
           <a href="/associacoes">Associações</a>
           <a href="/em-construcao">Filia-se</a>
           <a href="/em-construcao">Serviços</a>
-          <a href="#">Contato</a>
+          <a href="/contato">Contato</a>
         </div>
 
         <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%]">
