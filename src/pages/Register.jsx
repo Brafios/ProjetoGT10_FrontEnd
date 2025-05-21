@@ -17,8 +17,8 @@ export default function Register() {
 
   return (
     <>
-      <main className="bg-white min-h-screen flex flex-col justify-between font-sans">
-        <div className="flex flex-col justify-center items-center flex-1 py-10 bg-white">
+      <main className=" min-h-screen flex flex-col justify-between font-sans">
+        <div className="flex flex-col justify-center items-center flex-1 py-10 ">
           <div className="flex flex-col justify-center items-center w-[750px] bg-gray-300 p-8 rounded">
             <h1 className="text-3xl text-center font-bold font-sans mb-6">Cadastro</h1>
 
