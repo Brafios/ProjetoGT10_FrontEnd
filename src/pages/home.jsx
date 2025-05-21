@@ -31,14 +31,16 @@ export default function Home() {
                     />
                 </div>
                 <div className="flex flex-col text-center">
-                    {Array.from({ length: 10 }).map((_, i) => (
-                        <div 
-                            key={i} 
-                            className="flex justify-center items-center text-2xl h-[50px] border-b-4 border-[#C9CCCD]"
-                        >
-                            Associação {i + 1}
-                        </div>
-                    ))}
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 1</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 2</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 3</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 4</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 5</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 6</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 7</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 8</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 9</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 10</div>
                 </div>
             </div>
 
