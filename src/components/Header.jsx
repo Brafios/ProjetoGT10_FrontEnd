@@ -50,8 +50,13 @@ export default function Header() {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <a href="/" className="text-lg font-semibold text-white no-underline">
+            Home
+          </a>
+          
           <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">
-          Sobre</a>
+            Sobre
+          </a>
 
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-white">
@@ -106,12 +111,21 @@ export default function Header() {
               </Menu.Items>
             </Menu>
           ) : (
-            <a href="/login" className="">
-              <button className= 'text-[#263238] bg-white hover:bg-[#212b30] text-lg font-semibold no-underline rounded-md p-2'>
+            <div>
+              <button onClick={() => {
+                        window.location.href = "/login";
+                      }}
+              className= 'text-[#263238] bg-white hover:bg-[#212b30] text-lg font-semibold no-underline rounded-md p-2'>
                 Login
               </button>
-              
-            </a>
+              <button onClick={() => {
+                        window.location.href = "/Register";
+                      }}
+               className= 'text-[#263238] bg-white hover:bg-[#212b30] text-lg font-semibold no-underline rounded-md p-2 ml-2'>
+                Registrar
+              </button>
+            </div>
+
           )}
         </div>
       </nav>
@@ -130,6 +144,7 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <a href="/" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Home</a>
                 <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Sobre</a>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 px-3 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">
