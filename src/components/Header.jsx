@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from "../pages/AuthContext";
 import logo from "../assets/img/LogoSimples.png";
+import logooficial from "../assets/img/logo_oficial_sf.png";
 import {
   Dialog,
   DialogPanel,
@@ -50,7 +51,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">FACC</span>
-            <img alt="Logo" src={logo} className="h-20 w-auto" />
+            <img alt="Logo" src={logooficial} className="h-20 w-auto" />
           </a>
         </div>
 
