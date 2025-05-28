@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from "../pages/AuthContext";
 import logo from "../assets/img/LogoSimples.png";
-import logooficial from "../assets/img/logo_oficial_sf.png";
+import logooficial from "../assets/img/logo_oficial_header_sf.png";
 import {
   Dialog,
   DialogPanel,
@@ -30,12 +30,14 @@ export default function Header() {
   const { usuarioLogado, logout } = useAuth();
 
   return (
-    <div className="bg-[#263238]">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 ">
-        <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+
+    <header className='bg-[--secondary-color]'>
+      <div className="">
+      <nav aria-label="Global" className="ml-96 flex max-w-6xl items-center justify-between p-6 lg:px-8 ">
+        <div className="flex">
+          <a href="/" className="-m-1.9 p-1.9">
             <span className="sr-only">FACC</span>
-            <img alt="Logo" src={logooficial} className="h-20 w-auto" />
+            <img alt="Logo da FACC" src={logooficial} className="h-auto w-48" />
           </a>
         </div>
 
@@ -50,12 +52,12 @@ export default function Header() {
           </button>
         </div>
 
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-11">
+          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">
           Sobre</a>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-white">
+            <PopoverButton className="text-[--tertiary-text] flex items-center gap-x-1 text-lg font-semibold">
               Associações
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -64,7 +66,7 @@ export default function Header() {
                 {products.map((item) => (
                   <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900 no-underline text-lg">
+                      <a href={item.href} className="text-[--tertiary-text] text-lg block font-semibold no-underline ">
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -75,13 +77,13 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Filia-se</a>
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Benefícios</a>
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Notícias</a>
-          <a href="/contato" className="text-lg font-semibold text-white no-underline">Contato</a>
+          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Filia-se</a>
+          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Benefícios</a>
+          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
+          <a href="/contato" className="text-[--tertiary-text] text-lg font-semibold no-underline">Contato</a>
         </PopoverGroup>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:justify-center ml-5">
           {usuarioLogado ? (
             <Menu as="div" className="relative inline-block text-left">
               <div>
@@ -108,7 +110,7 @@ export default function Header() {
             </Menu>
           ) : (
             <a href="/login" className="">
-              <button className= 'text-[#263238] bg-white hover:bg-[#212b30] text-lg font-semibold no-underline rounded-md p-2'>
+              <button className= 'text-white bg-[#008d6c] hover:bg-[--tertiary-color] text-lg font-semibold no-underline rounded-md p-2'>
                 Login
               </button>
               
@@ -172,6 +174,8 @@ export default function Header() {
         </DialogPanel>
       </Dialog>
     </div>
+    </header>
+    
   );
 }
 
