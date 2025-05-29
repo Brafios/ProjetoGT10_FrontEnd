@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    font-family: "Sansation", sans-serif;
+}
+
+:root {
+  --primary-color: #3b8ea5;
+  --secondary-color: #ffffff;
+  --tertiary-color: #005E8A;
+  --button-secondary-color: #009739;
+  --emphasis-color: #f0ad4e;
+  --background-color: #f4f7f6;
+  --primary-text: #333333;
+  --secondary-text: #6c757d;
+  --tertiary-text: #005E8A;
+  --overlay-color: #00000080;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text);
+}

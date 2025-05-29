@@ -1,18 +1,20 @@
 
 import { Instagram, Facebook, X, Youtube, Twitch } from 'lucide-react';
-import logo from '../assets/img/LogoSimples.png'
+import logo from '../assets/img/logo_oficial_sf.png'
+import logoofical from '../assets/img/logo_oficial_footer_sf.png'
 
 export default function Footer() {
 
   return (
-    <div id="footer" className="bg-[#263238] text-white flex px-60  h-[300px] gap-[10px] text-sm align">
+    <footer className="bg-[--tertiary-color] text-white flex px-60  h-[300px] gap-[10px] text-sm align">
+      <div id="footer" className="">
       <div className="flex items-center gap-[20px] h-full w-full ">
         <div className="flex flex-col items-center gap-2 w-[34%] ">
           <div className="w-[95%] h-[95%] m-auto flex justify-center">
             <img
-              src={logo}
+              src={logoofical}
               alt="Logo da FACC"
-              className="w-1/2"
+              className="w-auto h-auto"
             />
           </div>
 
@@ -51,5 +53,7 @@ export default function Footer() {
         </div>
       </div>
     </div>
+    </footer>
+    
   );
 };

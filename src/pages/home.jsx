@@ -31,16 +31,16 @@ export default function Home() {
                     />
                 </div>
                 <div className="flex flex-col text-center">
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 1</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 2</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 3</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 4</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 5</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 6</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 7</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 8</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 9</div>
-                    <div className="socios flex justify-center items-center text-2xl h-[50px] border-b-4 border-color: #C9CCCD">Associação 10</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACC - Fortaleza</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Sobral</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - São Gonçalo do Amarante</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Quixadá</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Crateús</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Iguatu</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Crato</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Itapipoca</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Baturité</div>
+                    <div className="socios flex justify-center items-center text-2xl h-[60px] border-b-4 border-color: #C9CCCD">ACE - Camocim</div>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ export default function Home() {
                     <ImageCarousel />
                 </div>
 
-                <div className="p-4">
+                <div className="p-4 mt-20">
                     <hr className="bg-[#263238] h-1 my-4 rounded-lg" />
                     <h1 className="text-2xl font-bold">Nossas Notícias</h1>
 
@@ -62,10 +62,13 @@ export default function Home() {
                                 onClick={manutencao} 
                                 className="cursor-pointer"
                             >
-                                <img src={img} alt={`noticia ${index + 1}`} className="w-full rounded-md" />
+                                <img src={img} alt={`noticia ${index + 1}`} className="w-full rounded-md object-contain" />
                                 <p className="mt-3 text-sm">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 </p>
+                                <div className='justify-start items-center flex mt-2'>
+                                    <p className="text-sm underline underline-offset-2">Saiba Mais</p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -80,10 +83,10 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Parcerias */}
+                {/* Serviços */}
                 <div className="p-4">
                     <hr className="bg-[#263238] h-1 my-4 rounded-lg" />
-                    <h1 className="text-2xl font-bold">Parcerias</h1>
+                    <h1 className="text-2xl font-bold">Serviços</h1>
 
                     <div className="grid grid-cols-3 gap-6 mt-6">
                         {[benf1, benf2, benf3, benf1, benf2, benf3].map((img, index) => (
@@ -94,8 +97,11 @@ export default function Home() {
                             >
                                 <img src={img} alt={`parceria ${index + 1}`} className="w-full rounded-md" />
                                 <p className="mt-3 text-sm">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto necessitatibus delectus quam commodi vero.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 </p>
+                                <div className='justify-start items-center flex mt-2'>
+                                    <p className="text-sm underline underline-offset-2">Saiba Mais</p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -113,7 +119,7 @@ export default function Home() {
 
             {/*  */}
             <div className="w-[19%]">
-                <div className="flex justify-center mt-4">
+                <div className="flex justify-center mt-28">
                     <img src={adsense} alt="Adsense" className="rounded-md" />
                 </div>
             </div>

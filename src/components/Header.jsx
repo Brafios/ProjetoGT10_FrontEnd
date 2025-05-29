@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from "../pages/AuthContext";
 import logo from "../assets/img/LogoSimples.png";
-import logooficial from "../assets/img/logo_oficial_sf.png";
+import logooficial from "../assets/img/logo_oficial_header_sf.png";
 import {
   Dialog,
   DialogPanel,
@@ -46,12 +46,16 @@ export default function Header() {
   }, [isDarkMode]);
 
   return (
-    <div className="bg-[#263238]">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+    <div>
+      <nav
+        aria-label="Global"
+        className="bg-[--secondary-color] fixed top-0 left-0 w-full z-50 flex items-center justify-start p-6 lg:px-8 shadow-lg"
+        style={{ minHeight: "60px" }}
+      >
+        <div className="flex">
+          <a href="/" className="-m-1.9 p-1.9">
             <span className="sr-only">FACC</span>
-            <img alt="Logo" src={logooficial} className="h-20 w-auto" />
+            <img alt="Logo da FACC" src={logooficial} className="h-auto w-48 ml-72 mr-10" />
           </a>
         </div>
 
@@ -67,10 +71,10 @@ export default function Header() {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="/" className="text-lg font-semibold text-white no-underline">Home</a>
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Sobre</a>
+          <a href="/" className="text-[--tertiary-text] text-lg font-semibold no-underline">Home</a>
+          <a href="/sobre" className="text-[--tertiary-text] text-lg font-semibold no-underline">Sobre</a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-white">
+            <PopoverButton className="text-[--tertiary-text] flex items-center gap-x-1 text-lg font-semibold">
               Associações
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -79,7 +83,7 @@ export default function Header() {
                 {products.map((item) => (
                   <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900 no-underline text-lg">
+                      <a href={item.href} className="text-[--tertiary-text] text-lg block font-semibold no-underline ">
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -89,16 +93,15 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Filia-se</a>
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Benefícios</a>
-          <a href="/em-construcao" className="text-lg font-semibold text-white no-underline">Notícias</a>
-          <a href="/contato" className="text-lg font-semibold text-white no-underline">Contato</a>
+          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Serviços</a>
+          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
+          <a href="/contato" className="text-[--tertiary-text] text-lg font-semibold no-underline">Contato</a>
         </PopoverGroup>
 
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <button
             onClick={toggleTheme}
-            className="text-white hover:text-gray-300 transition p-2 rounded-full ml-5"
+            className="text-[--tertiary-text] hover:text-gray-800 transition p-2 rounded-full ml-5"
             aria-label="Alternar tema"
           >
             {isDarkMode ? (
@@ -133,13 +136,13 @@ export default function Header() {
             <div className='ml-5'>
               <button
                 onClick={() => { window.location.href = "/login"; }}
-                className="text-[#263238] bg-white hover:bg-[#212b30] text-lg font-semibold no-underline rounded-md p-2"
+                className="text-[--secondary-color] bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md p-2"
               >
                 Login
               </button>
               <button
                 onClick={() => { window.location.href = "/Register"; }}
-                className="text-[#263238] bg-white hover:bg-[#212b30] text-lg font-semibold no-underline rounded-md p-2 ml-2"
+                className="text-[--secondary-color] bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md p-2 ml-2"
               >
                 Registrar
               </button>
@@ -162,7 +165,7 @@ export default function Header() {
 
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 py-10">
                 <a href="/" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Home</a>
                 <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Sobre</a>
                 <Disclosure as="div" className="-mx-3">
@@ -178,8 +181,7 @@ export default function Header() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Filia-se</a>
-                <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Benefícios</a>
+                <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Serviços</a>
                 <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Notícias</a>
                 <a href="/contato" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Contato</a>
               </div>
