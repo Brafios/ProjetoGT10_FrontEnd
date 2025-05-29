@@ -55,7 +55,7 @@ export default function Header() {
         <div className="flex">
           <a href="/" className="-m-1.9 p-1.9">
             <span className="sr-only">FACC</span>
-            <img alt="Logo da FACC" src={logooficial} className="h-auto w-48 ml-72 mr-10" />
+            <img alt="Logo da FACC" src={logooficial} className="h-auto w-48 mr-40" />
           </a>
         </div>
 
@@ -70,7 +70,7 @@ export default function Header() {
           </button>
         </div>
 
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-8">
           <a href="/" className="text-[--tertiary-text] text-lg font-semibold no-underline">Home</a>
           <a href="/sobre" className="text-[--tertiary-text] text-lg font-semibold no-underline">Sobre</a>
           <Popover className="relative">
@@ -101,7 +101,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <button
             onClick={toggleTheme}
-            className="text-[--tertiary-text] hover:text-gray-800 transition p-2 rounded-full ml-5"
+            className="text-[--tertiary-text] hover:text-gray-800 transition p-2 rounded-full ml-24"
             aria-label="Alternar tema"
           >
             {isDarkMode ? (
@@ -136,7 +136,7 @@ export default function Header() {
             <div className='ml-5'>
               <button
                 onClick={() => { window.location.href = "/login"; }}
-                className="text-[--secondary-color] bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md p-2"
+                className="text-[--secondary-color] bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md p-2 ml-8"
               >
                 Login
               </button>
@@ -194,9 +194,6 @@ export default function Header() {
                   <div>
                     <a href="/login" className="block rounded-lg px-3 py-2.5 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">
                       Login
-                    </a>
-                    <a href="/Register" className="block rounded-lg px-3 py-2.5 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">
-                      Registrar
                     </a>
                   </div>
                 )}

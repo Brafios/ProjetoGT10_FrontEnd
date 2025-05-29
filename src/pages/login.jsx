@@ -30,7 +30,7 @@ export default function Login() {
           <h1 className="text-3xl text-center font-bold font-sans mb-6">Login</h1>
 
           <div className="flex flex-col w-[400px]">
-          <label className="font-sans font-semibold mb-1">Usuário ou E-mail</label>
+          <label className="font-serif font-bold mb-1">Usuário ou E-mail</label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}

@@ -42,7 +42,7 @@ export default function Associacoes() {
       <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg">
         <h1 className="text-3xl font-bold font-serif mb-6 text-center">Associações</h1>
 
-        {/* Campo de busca */}
+        
         <div className="relative w-full max-w-[400px] mb-8">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
           <input
@@ -54,7 +54,7 @@ export default function Associacoes() {
           />
         </div>
 
-        {/* Lista de associações */}
+        
         <div className="w-full flex flex-col gap-6">
           {associacoesFiltradas.length > 0 ? (
             associacoesFiltradas.map((assoc, index) => (
