@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
+import Sobre from "./pages/Sobre";
 import Layout from './layout/Layout';
 import Login from "./pages/login";
 import Register from "./pages/Register";
 import Recuperar from "./pages/Recuperar";
-import Contato from "./pages/contato";
+import Contato from "./pages/Contato";
 import Associacoes from "./pages/Associacoes";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import EmConstrucao from "./pages/EmConstrucao";
 import { AuthProvider } from "./pages/AuthContext";
 
@@ -18,6 +19,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<Sobre />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

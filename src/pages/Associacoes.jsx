@@ -7,9 +7,9 @@ export default function Associacoes() {
   const associacoes = [
     {
       cidade: "Fortaleza",
-      nome: "Associação Fortaleza Saúde",
+      nome: "Associação Comercial do Ceará - Fortaleza",
       descricao:
-        "Associação voltada à promoção da saúde e bem-estar na região de Fortaleza.",
+        "Associação mais antiga de classe empresarial em atividade no Estado.",
     },
     {
       cidade: "Fortaleza",
@@ -38,8 +38,8 @@ export default function Associacoes() {
   );
 
   return (
-    <div className="min-h-screen w-screen  flex justify-center items-center py-8 px-4">
-      <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded">
+    <div className="min-h-screen w-screen  flex justify-center items-center py-8 px-4 mt-28">
+      <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg">
         <h1 className="text-3xl font-bold font-serif mb-6 text-center">Associações</h1>
 
         {/* Campo de busca */}

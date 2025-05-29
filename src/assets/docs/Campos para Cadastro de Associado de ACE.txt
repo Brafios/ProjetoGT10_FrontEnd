@@ -1,0 +1,10 @@
+Informações sobre um Associado de ACE: 
+
+Nome da empresa, 
+CNPJ, 
+Endereço, 
+Principal atividade Econômica (CNAE) => Cartão CNPJ - Código e Descrição da Atividade Econômica Principal,
+QTD de  funcionários, 
+Nome dos proprietários, 
+CPFs, 
+Faixa de faturamento.
