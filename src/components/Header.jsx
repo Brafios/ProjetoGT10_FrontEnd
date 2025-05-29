@@ -140,12 +140,6 @@ export default function Header() {
               >
                 Login
               </button>
-              <button
-                onClick={() => { window.location.href = "/Register"; }}
-                className="text-[--secondary-color] bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md p-2 ml-2"
-              >
-                Registrar
-              </button>
             </div>
           )}
         </div>
