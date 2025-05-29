@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 import Sobre from "./pages/Sobre";
@@ -6,9 +5,9 @@ import Layout from './layout/Layout';
 import Login from "./pages/login";
 import Register from "./pages/Register";
 import Recuperar from "./pages/Recuperar";
-import Contato from "./pages/Contato";
+import Contato from "./pages/contato";
 import Associacoes from "./pages/Associacoes";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import EmConstrucao from "./pages/EmConstrucao";
 import { AuthProvider } from "./pages/AuthContext";
 
