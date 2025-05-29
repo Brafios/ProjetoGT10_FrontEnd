@@ -22,7 +22,7 @@ export default function Recuperar(){
       };
 
     return(
-        <div className="h-screen w-screen bg-white flex justify-center items-center">
+        <div className="h-screen w-screen flex justify-center items-center">
             <div className="flex flex-col items-center w-screen">
                 <div className="flex flex-col justify-center items-center w-[750px] h-[400px] bg-gray-300 p-8 rounded">
                     <h1 className="text-3xl text-center font-bold font-serif mb-6">Recuperar Senha</h1>
