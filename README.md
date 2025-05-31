@@ -1,14 +1,14 @@
-### Projeto: Federação das Associações dos Comerciantes do Ceará
+### Projeto: Federação do Comercio
 
 ---
 
 ### Descrição:
-Um projeto web para Associações no qual o usuário poderá interagir buscando noticias, associações filiadas, ou entrar contato com federação.  O site na parte do FrontEnd a linguagem de programação react com estilização da biblioteca tailwindcss.
+Um projeto web para ajudar Federações no qual o usuário poderá interagir buscando noticias, associações filiadas, ou entrar contato com federação.  O site utilizou na parte do FrontEnd a linguagem de programação react com estilização da biblioteca tailwindcss.
 
 ---
 
 ### Integrantes do Projeto:
-- **Nome 1**: Matheus Carvalho de Araújo **Likedin** 
+- **Nome 1**: Matheus Carvalho de Araújo **Likedin:** https://www.linkedin.com/in/matheuscarvalho-sec/
 - **Nome 2**: 
 - **Nome 3**:
 
@@ -47,13 +47,7 @@ Um projeto web para Associações no qual o usuário poderá interagir buscando 
 
 #### Imagens do Projeto
 **Home**
-img_noticia_0.jpg
-img_noticia_00.jpg
-img_noticia_000.jpg
-img_noticia_1.jpg
-img_noticia_2.jpg
-img_noticia_3.jpg
-ad-sense.jpg
+
 
 ### Executando o Projeto
 1. **utilize o powershell ou gitbash**
