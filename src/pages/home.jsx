@@ -31,16 +31,16 @@ export default function Home() {
                     />
                 </div>
                 <div className="flex flex-col text-center">
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACC - Fortaleza</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Sobral</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - São Gonçalo do Amarante</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Quixadá</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Crateús</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Iguatu</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Crato</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Itapipoca</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Baturité</div>
-                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">ACE - Camocim</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Fortaleza</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio João Pessoa</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Porto Velho</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio São Paulo</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Rio de Janeiro</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Vitória</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Boa Vista</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Cuiabá</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Bahia</div>
+                    <div className="socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Campo Grande</div>
                 </div>
             </div>
 
