@@ -85,4 +85,7 @@ Um projeto web para ajudar Federações no qual o usuário poderá interagir bus
    npm run dev
    ```
 ---
-**OBS: VEJA SE VOCÊ TEM INSTALADO O NODE PARA UTILIZAR COMANDO NPM PARA ISSO VÁ PARA SEU TERMINAL E DIGITE COMANDO** node -v 
+**OBS: VEJA SE VOCÊ TEM INSTALADO O NODE PARA UTILIZAR COMANDO NPM PARA ISSO VÁ PARA SEU TERMINAL E DIGITE COMANDO** 
+```sh
+node -v
+``` 
