@@ -36,9 +36,9 @@ export default function Contato (props) {
       );
   };
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
+    <div className="h-screen w-screen flex justify-center items-center mt-16">
       <div className="flex flex-col items-center w-screen">
-        <div className="flex flex-col justify-center items-center w-[750px] bg-gray-300 p-8 rounded shadow-lg">
+        <div className="flex flex-col justify-center items-center w-[800px] bg-gray-300 p-8 rounded shadow-lg">
           <h2 className="text-3xl text-center font-bold font-serif mb-6">Fale Conosco</h2>
           <p className="text-center font-serif mb-6">
           Utilize o formulário abaixo para se comunicar com a Federação das Associações Comerciais do Ceará (FACC).
