@@ -54,11 +54,11 @@ Um projeto web para ajudar Federações no qual o usuário poderá interagir bus
 3. **Resgistrar**
    ![image](https://github.com/user-attachments/assets/29c451e4-11a7-497c-bc96-b52f08807f97)
 4. **Recuperar**
-   ![image](https://github.com/user-attachments/assets/1d4f23f1-f4dc-43b0-9c10-d5da25340e0f)
+   ![image](https://github.com/user-attachments/assets/8e054e77-67ab-4bb4-b093-9feba1f9317b)
 5. **Sobre**
-   ![image](https://github.com/user-attachments/assets/2556db9c-cdbf-4c4d-8c60-397932bcbd69)
+   ![image](https://github.com/user-attachments/assets/9dc38db1-9a32-4e3d-93be-44725da873cb)
 6. **Contato**
-   ![image](https://github.com/user-attachments/assets/d6f4b068-4f37-496e-9c16-9cac17a90743)
+   ![image](https://github.com/user-attachments/assets/36857343-fe12-41e5-ae7a-34175fc78325)
 7. **EmConstruçao**
    ![image](https://github.com/user-attachments/assets/d9463e84-21b4-4a8a-aded-83219b8d7ebd)
 8. **Associaçoes**
