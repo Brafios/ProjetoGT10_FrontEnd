@@ -5,10 +5,10 @@
 ### Descrição:
 Estamos desenvolvendo um projeto web voltado para Federações. O objetivo é criar uma plataforma onde os usuários possam:
 
-    Buscar notícias relevantes.
-    Encontrar associações filiadas.
-    Facilitar o contato direto com as Federações.
-    Futuramente, acessar e utilizar os serviços oferecidos por elas.
+* Buscar notícias relevantes.
+* Encontrar associações filiadas.
+* Facilitar o contato direto com as Federações.
+* Futuramente, acessar e utilizar os serviços oferecidos por elas.
 
 Para o Front-End, utilizamos a biblioteca React para a construção da interface, e a estilização foi feita com Tailwind CSS, garantindo um design moderno e responsivo.
 
