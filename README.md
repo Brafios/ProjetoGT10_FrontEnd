@@ -53,6 +53,8 @@ Para o Front-End, utilizamos a biblioteca React para a construção da interface
 7. **EmConstrução**: Página para quando funcionalidade ainda não estiver pronta.
 8. **Associações**: Página mostrando todas associações vinculadas como a suas informações
 
+---
+
 ### Imagens do Projeto
 1. **Home**
   ![image](https://github.com/user-attachments/assets/8d75fbc6-f823-4464-a27a-0000f3bc9b57)
