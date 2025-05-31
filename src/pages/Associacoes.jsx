@@ -54,7 +54,7 @@ export default function Associacoes() {
   );
 
   return (
-    <div className="min-h-screen w-screen  flex justify-center items-center py-8 px-4 mt-28">
+    <div className="min-h-screen w-screen  flex justify-center items-center py-8 px-4 mt-32">
       <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg">
         <h1 className="text-3xl font-bold font-serif mb-6 text-center">Associações</h1>
 
