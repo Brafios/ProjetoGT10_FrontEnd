@@ -72,4 +72,5 @@ Um projeto web para ajudar Federações no qual o usuário poderá interagir bus
 3. **entre no diretório criado com comando:** cd ProjetoGT10_FullStack
 4. **instale as bibliotecas utilizadas com comando:** npm i
 5. **para visualizar o código na página web:** npm run dev
+---
 **OBS: VEJA SE VOCÊ TEM INSTALADO O NODE PARA UTILIZAR COMANDO NPM PARA ISSO VÁ PARA SEU TERMINAL E DIGITE COMANDO** node -v 
