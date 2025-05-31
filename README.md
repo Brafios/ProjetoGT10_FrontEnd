@@ -3,7 +3,14 @@
 ---
 
 ### Descrição:
-Um projeto web para ajudar Federações no qual o usuário poderá interagir buscando noticias, associações filiadas, ou entrar contato com federação como futuramente usar seus serviços.  O site utilizou na parte do FrontEnd a linguagem de programação react com estilização da biblioteca tailwindcss.
+Estamos desenvolvendo um projeto web voltado para Federações. O objetivo é criar uma plataforma onde os usuários possam:
+
+    Buscar notícias relevantes.
+    Encontrar associações filiadas.
+    Facilitar o contato direto com as Federações.
+    Futuramente, acessar e utilizar os serviços oferecidos por elas.
+
+Para o Front-End, utilizamos a biblioteca React para a construção da interface, e a estilização foi feita com Tailwind CSS, garantindo um design moderno e responsivo.
 
 ---
 
