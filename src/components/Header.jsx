@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from "../pages/AuthContext";
-import logo from "../assets/img/LogoSimples.png";
-import logooficial from "../assets/img/logo_oficial_header_sf.png";
+import logo from "../assets/img/logo_sem_fundo.png";
 import {
   Dialog,
   DialogPanel,
@@ -49,13 +48,13 @@ export default function Header() {
     <div>
       <nav
         aria-label="Global"
-        className="bg-[--secondary-color] fixed top-0 left-0 w-full z-50 flex items-center justify-start p-6 lg:px-8 shadow-lg"
+        className="bg-[--secondary-color] fixed top-0 left-0 w-full z-50 flex items-center justify-start p-4 lg:px-8 shadow-lg"
         style={{ minHeight: "60px" }}
       >
         <div className="flex">
           <a href="/" className="-m-1.9 p-1.9">
             <span className="sr-only">FACC</span>
-            <img alt="Logo da FACC" src={logooficial} className="h-auto w-48 mr-40" />
+            <img alt="Logo da FC" src={logo} className="h-[70px]  w-48 mr-40" />
           </a>
         </div>
 
