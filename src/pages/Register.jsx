@@ -19,7 +19,7 @@ export default function Register() {
     <>
       <main className=" h-screen w-screen flex flex-col justify-between font-sans mt-20">
         <div className="flex flex-col justify-center items-center flex-1 py-10 ">
-          <div className="flex flex-col justify-center items-center w-[750px] bg-gray-300 p-8 rounded">
+          <div className="flex flex-col justify-center items-center w-[800px] bg-gray-300 p-8 rounded">
             <h1 className="text-3xl text-center font-bold font-sans mb-6">Cadastro</h1>
 
             <form className="flex flex-col w-[400px] gap-4" onSubmit={handleSubmit}>
