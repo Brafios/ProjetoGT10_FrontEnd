@@ -17,13 +17,12 @@ export default function Footer() {
               className="w-auto h-auto"
             />
           </div>
-
           <div className="flex justify-center gap-4">
-            <Instagram />
-            <Facebook />
-            <X />
-            <Youtube />
-            <Twitch />
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" rel="noopener noreferrer"><Facebook /></a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><X /></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><Youtube /></a>
+            <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer"><Twitch /></a>
           </div>
         </div>
         <div className="flex flex-col gap-[3px] w-[22%] h-[75%] mt-10 ml-16">
