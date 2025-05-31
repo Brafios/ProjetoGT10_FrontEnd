@@ -7,27 +7,43 @@ export default function Associacoes() {
   const associacoes = [
     {
       cidade: "Fortaleza",
-      nome: "Associação Comercial do Ceará - Fortaleza",
+      nome: "Comércio Fortaleza",
+      diretoria: "Presidente: Julio César, Vice: Brutus",
+      mandato: "Mandato: 12/02/2025 - 12/02/2027",
+      contato: "Contato: (85)99999-9999",
       descricao:
-        "Associação mais antiga de classe empresarial em atividade no Estado.",
+        "Comércio de Fortaleza e associados",
+      cnpj: "CNPJ: 00.000.000/0000-00",
     },
     {
-      cidade: "Fortaleza",
-      nome: "Associação Cultural Nordeste",
+      cidade: "João Pessoa",
+      nome: "Comércio João Pessoa",
+      diretoria: "Presidente: Fagundes, Vice: Maria",
+      mandato: "Mandato: 12/06/2023 - 12/06/2025",
+      contato: "Contato: (83)99999-9999",
       descricao:
-        "Organização dedicada à preservação da cultura nordestina.",
+        "Comércio João Pessoa e associados",
+      cnpj: "CNPJ: 00.000.000/0000-00",
     },
     {
-      cidade: "Sobral",
-      nome: "Associação Jovens do Futuro",
+      cidade: "Porto Velho",
+      nome: "Comércio Porto Velho",
+      diretoria: "Presidente: Ana Lucia, Vice: José",
+      mandato: "Mandato: 20/08/2024 - 20/08/2026",
+      contato: "Contato: (69)99999-9999",
       descricao:
-        "Iniciativa para capacitação profissional de jovens em Sobral.",
+        "Comércio Porto Velho e associados",
+      cnpj: "CNPJ: 00.000.000/0000-00",
     },
     {
-      cidade: "Juazeiro",
-      nome: "Associação de Agricultores Locais",
+      cidade: "São Paulo",
+      nome: "Comércio São Paulo",
+      diretoria: "Presidente: Paulo, Vice: Paula",
+      mandato: "Mandato: 29/11/2023 - 29/11/2025",
+      contato: "Contato: (11)99999-9999",
       descricao:
-        "Apoio e incentivo à agricultura familiar na região do Cariri.",
+        "Comércio de São Paulo Associados",
+      cnpj: "CNPJ: 00.000.000/0000-00",
     },
   ];
 
@@ -66,7 +82,19 @@ export default function Associacoes() {
                 <div>
                   <h2 className="text-xl font-bold mb-2">{assoc.nome}</h2>
                   <p className="text-sm text-gray-700 leading-relaxed">
+                    {assoc.diretoria}
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {assoc.mandato}
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {assoc.contato}
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
                     {assoc.descricao}
+                  </p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    {assoc.cnpj}
                   </p>
                 </div>
               </div>
