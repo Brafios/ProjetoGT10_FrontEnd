@@ -60,7 +60,7 @@ Um projeto web para ajudar Federações no qual o usuário poderá interagir bus
 6. **Contato**
    ![image](https://github.com/user-attachments/assets/d6f4b068-4f37-496e-9c16-9cac17a90743)
 7. **EmConstruçao**
-   ![em-construcao-CJab7-GT](https://github.com/user-attachments/assets/4cabaaac-bc36-4015-8bc2-8334d0f3687d)
+   ![image](https://github.com/user-attachments/assets/d9463e84-21b4-4a8a-aded-83219b8d7ebd)
 8. **Associaçoes**
    ![image](https://github.com/user-attachments/assets/222d572c-711c-49d0-a7f4-56450323ef65)
 
