@@ -1,34 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css'
-import Sobre from "./pages/Sobre";
-import Layout from './layout/Layout';
-import Login from "./pages/login";
-import Register from "./pages/Register";
-import Recuperar from "./pages/Recuperar";
-import Contato from "./pages/contato";
-import Associacoes from "./pages/Associacoes";
-import Home from "./pages/home";
-import EmConstrucao from "./pages/EmConstrucao";
-import { AuthProvider } from "./pages/AuthContext";
+import Paths from "./routes/Paths";
 
 function App() {
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/contato" element={<Contato />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/associacoes" element={<Associacoes />} />
-            <Route path="/recuperar" element={<Recuperar />} />
-            <Route path="/em-construcao" element={<EmConstrucao />} />
-          </Routes>
-        </Layout>
-      </AuthProvider>
-    </BrowserRouter>
+     <>
+      <Paths />
+     </>
   );
 }
 

@@ -1,9 +1,8 @@
 
 
-export default function Sobre() {
-
-    return (
-        <div className="h-screen w-screen flex justify-center items-center mt-28">
+const About = () => {
+    return ( 
+         <div className="h-screen w-screen flex justify-center items-center mt-28">
             <div className="flex flex-col items-center w-full max-w-3xl bg-gray-300 p-8 rounded shadow-lg">
                 <h2 className="text-3xl text-center font-bold font-serif mb-6">
                     Nossa História começou em 2025 procurando ajudar associações e empresários
@@ -13,6 +12,7 @@ export default function Sobre() {
                 </p>
             </div>
         </div>
-    );
-
-};
+     );
+}
+ 
+export default About;

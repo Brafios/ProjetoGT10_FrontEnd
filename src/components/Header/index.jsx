@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useAuth } from "../pages/AuthContext";
-import logo from "../assets/img/logo_sem_fundo.png";
+import logo from "../../assets/img/logo_sem_fundo.png";
 import {
   Dialog,
   DialogPanel,
@@ -16,7 +15,6 @@ import {
 import {
   Bars3Icon,
   XMarkIcon,
-  UserCircleIcon,
   MoonIcon,
   SunIcon
 } from '@heroicons/react/24/outline';
@@ -26,26 +24,25 @@ const products = [
   { name: 'Filiadas', description: '', href: '/associacoes' }
 ];
 
-export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { usuarioLogado, logout } = useAuth();
-
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem('theme') === 'dark';
-  });
-
-  const toggleTheme = () => {
-    const newTheme = isDarkMode ? 'light' : 'dark';
-    localStorage.setItem('theme', newTheme);
-    setIsDarkMode(!isDarkMode);
-  };
-
-  useEffect(() => {
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-  }, [isDarkMode]);
-
-  return (
-    <div>
+const Header = () => {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    
+      const [isDarkMode, setIsDarkMode] = useState(() => {
+        return localStorage.getItem('theme') === 'dark';
+      });
+    
+      const toggleTheme = () => {
+        const newTheme = isDarkMode ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+        setIsDarkMode(!isDarkMode);
+      };
+    
+      useEffect(() => {
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      }, [isDarkMode]);
+    
+    return ( 
+        <div>
       <nav
         aria-label="Global"
         className="bg-[--secondary-color] fixed top-0 left-0 w-full z-50 flex items-center justify-start p-4 lg:px-8 shadow-lg"
@@ -71,7 +68,7 @@ export default function Header() {
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-8">
           <a href="/" className="text-[--tertiary-text] text-lg font-semibold no-underline">Home</a>
-          <a href="/sobre" className="text-[--tertiary-text] text-lg font-semibold no-underline">Sobre</a>
+          <a href="/about" className="text-[--tertiary-text] text-lg font-semibold no-underline">Sobre</a>
           <Popover className="relative">
             <PopoverButton className="text-[--tertiary-text] flex items-center gap-x-1 text-lg font-semibold">
               Associações
@@ -92,8 +89,8 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Serviços</a>
-          <a href="/em-construcao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
+          <a href="/EmConstrucao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Serviços</a>
+          <a href="/EmConstrucao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
           <a href="/contato" className="text-[--tertiary-text] text-lg font-semibold no-underline">Contato</a>
         </PopoverGroup>
 
@@ -109,38 +106,16 @@ export default function Header() {
               <MoonIcon className="h-6 w-6" />
             )}
           </button>
-
-          {usuarioLogado ? (
-            <Menu as="div" className="relative inline-block text-left">
-              <Menu.Button className="inline-flex justify-center rounded-md bg-white p-2 text-sm font-medium text-black">
-                <UserCircleIcon className="w-6 h-6" />
-              </Menu.Button>
-              <Menu.Items className="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <Menu.Item>
-                  {({ active }) => (
-                    <button
-                      onClick={() => {
-                        logout();
-                        window.location.href = "/login";
-                      }}
-                      className={`w-full text-left px-4 py-2 text-sm ${active ? 'bg-gray-100' : ''}`}
-                    >
-                      Logout
-                    </button>
-                  )}
-                </Menu.Item>
-              </Menu.Items>
-            </Menu>
-          ) : (
-            <div className='ml-5'>
-              <button
-                onClick={() => { window.location.href = "/login"; }}
-                className="text-[--secondary-color] bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md p-2 ml-8"
-              >
-                Login
-              </button>
-            </div>
-          )}
+            
+          <div className='ml-5'>
+            <button
+              onClick={() => { window.location.href = "/login"; }}
+              className="text-[--secondary-color] bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md p-2 ml-8"
+            >
+              Login
+            </button>
+          </div>
+          
         </div>
       </nav>
 
@@ -178,32 +153,13 @@ export default function Header() {
                 <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Notícias</a>
                 <a href="/contato" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">Contato</a>
               </div>
-              <div className="py-6">
-                {usuarioLogado ? (
-                  <button
-                    onClick={() => {
-                      logout();
-                      window.location.href = "/login";
-                    }}
-                    className="block w-full text-left rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Logout
-                  </button>
-                ) : (
-                  <div>
-                    <a href="/login" className="block rounded-lg px-3 py-2.5 text-base font-semibold no-underline text-gray-900 hover:bg-gray-50">
-                      Login
-                    </a>
-                  </div>
-                )}
-              </div>
+              
             </div>
           </div>
         </DialogPanel>
       </Dialog>
     </div>
-  );
+     );
 }
-
-
-
+ 
+export default Header;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Register() {
+const Registro = () => {
   const [nome, setNome] = useState('');
   const [usuario, setUsuario] = useState('');
   const [email, setEmail] = useState('');
@@ -12,12 +12,10 @@ export default function Register() {
     e.preventDefault();
     const formData = { nome, usuario, email, funcao, senha };
     console.log(formData);
-  
   };
-
-  return (
-    <>
-      <main className=" h-screen w-screen flex flex-col justify-between font-sans mt-20">
+    return ( 
+        <>
+            <main className=" h-screen w-screen flex flex-col justify-between font-sans mt-20">
         <div className="flex flex-col justify-center items-center flex-1 py-10 ">
           <div className="flex flex-col justify-center items-center w-[800px] bg-gray-300 p-8 rounded">
             <h1 className="text-3xl text-center font-bold font-sans mb-6">Cadastro</h1>
@@ -95,6 +93,8 @@ export default function Register() {
 
         
       </main>
-    </>
-  );
+        </>
+     );
 }
+ 
+export default Registro;

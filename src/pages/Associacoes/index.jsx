@@ -1,59 +1,60 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 
-export default function Associacoes() {
-  const [search, setSearch] = useState("");
 
-  const associacoes = [
-    {
-      cidade: "Fortaleza",
-      nome: "Comércio Fortaleza",
-      diretoria: "Presidente: Julio César, Vice: Brutus",
-      mandato: "Mandato: 12/02/2025 - 12/02/2027",
-      contato: "Contato: (85)99999-9999",
-      descricao:
-        "Comércio de Fortaleza e associados",
-      cnpj: "CNPJ: 00.000.000/0000-00",
-    },
-    {
-      cidade: "João Pessoa",
-      nome: "Comércio João Pessoa",
-      diretoria: "Presidente: Fagundes, Vice: Maria",
-      mandato: "Mandato: 12/06/2023 - 12/06/2025",
-      contato: "Contato: (83)99999-9999",
-      descricao:
-        "Comércio João Pessoa e associados",
-      cnpj: "CNPJ: 00.000.000/0000-00",
-    },
-    {
-      cidade: "Porto Velho",
-      nome: "Comércio Porto Velho",
-      diretoria: "Presidente: Ana Lucia, Vice: José",
-      mandato: "Mandato: 20/08/2024 - 20/08/2026",
-      contato: "Contato: (69)99999-9999",
-      descricao:
-        "Comércio Porto Velho e associados",
-      cnpj: "CNPJ: 00.000.000/0000-00",
-    },
-    {
-      cidade: "São Paulo",
-      nome: "Comércio São Paulo",
-      diretoria: "Presidente: Paulo, Vice: Paula",
-      mandato: "Mandato: 29/11/2023 - 29/11/2025",
-      contato: "Contato: (11)99999-9999",
-      descricao:
-        "Comércio de São Paulo Associados",
-      cnpj: "CNPJ: 00.000.000/0000-00",
-    },
-  ];
+const Associacoes = () => {
+    const [search, setSearch] = useState("");
 
-  const associacoesFiltradas = associacoes.filter(
-    (item) =>
-      item.nome.toLowerCase().includes(search.toLowerCase()) ||
-      item.cidade.toLowerCase().includes(search.toLowerCase())
-  );
+    const associacoes = [
+        {
+        cidade: "Fortaleza",
+        nome: "Comércio Fortaleza",
+        diretoria: "Presidente: Julio César, Vice: Brutus",
+        mandato: "Mandato: 12/02/2025 - 12/02/2027",
+        contato: "Contato: (85)99999-9999",
+        descricao:
+            "Comércio de Fortaleza e associados",
+        cnpj: "CNPJ: 00.000.000/0000-00",
+        },
+        {
+        cidade: "João Pessoa",
+        nome: "Comércio João Pessoa",
+        diretoria: "Presidente: Fagundes, Vice: Maria",
+        mandato: "Mandato: 12/06/2023 - 12/06/2025",
+        contato: "Contato: (83)99999-9999",
+        descricao:
+            "Comércio João Pessoa e associados",
+        cnpj: "CNPJ: 00.000.000/0000-00",
+        },
+        {
+        cidade: "Porto Velho",
+        nome: "Comércio Porto Velho",
+        diretoria: "Presidente: Ana Lucia, Vice: José",
+        mandato: "Mandato: 20/08/2024 - 20/08/2026",
+        contato: "Contato: (69)99999-9999",
+        descricao:
+            "Comércio Porto Velho e associados",
+        cnpj: "CNPJ: 00.000.000/0000-00",
+        },
+        {
+        cidade: "São Paulo",
+        nome: "Comércio São Paulo",
+        diretoria: "Presidente: Paulo, Vice: Paula",
+        mandato: "Mandato: 29/11/2023 - 29/11/2025",
+        contato: "Contato: (11)99999-9999",
+        descricao:
+            "Comércio de São Paulo Associados",
+        cnpj: "CNPJ: 00.000.000/0000-00",
+        },
+    ];
 
-  return (
+    const associacoesFiltradas = associacoes.filter(
+        (item) =>
+        item.nome.toLowerCase().includes(search.toLowerCase()) ||
+        item.cidade.toLowerCase().includes(search.toLowerCase())
+    );
+
+    return ( 
     <div className="min-h-screen w-screen  flex justify-center items-center py-8 px-4 mt-32">
       <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg">
         <h1 className="text-3xl font-bold font-serif mb-6 text-center">Associações</h1>
@@ -105,5 +106,7 @@ export default function Associacoes() {
         </div>
       </div>
     </div>
-  );
+     );
 }
+ 
+export default Associacoes;

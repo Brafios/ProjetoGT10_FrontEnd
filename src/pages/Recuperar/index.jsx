@@ -1,28 +1,24 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const mockUsers = [
-  { email: "geraçao@tech.com"}
-];
-
-export default function Recuperar(){
+const Recuperar = () => {
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
-
+    
     const handleRecuperar = () => {
         const foundUser = mockUsers.find(
-          (user) => user.email === email 
+            (user) => user.email === email 
         );
         if (foundUser) {
-          alert("Email de recuperação enviado");
-          navigate("/login");
+            alert("Email de recuperação enviado");
+            navigate("/login");
         } else {
-          alert("Email não encontrado");
+            alert("Email não encontrado");
         }
-      };
-
-    return(
-        <div className="h-screen w-screen flex justify-center items-center">
+    };
+    return ( 
+        <>
+         <div className="h-screen w-screen flex justify-center items-center">
             <div className="flex flex-col items-center w-screen">
                 <div className="flex flex-col justify-center items-center w-[800px] h-[400px] bg-gray-300 p-8 rounded">
                     <h1 className="text-3xl text-center font-bold font-serif mb-6">Recuperar Senha</h1>
@@ -48,6 +44,9 @@ export default function Recuperar(){
     
             </div>
         </div>
-    )
-
+        </>
+     );
 }
+ 
+export default Recuperar;
+
