@@ -1,98 +1,83 @@
-import { useState } from 'react';
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
+import Button from '../../components/Button';
+import FormInput from '../../components/FormInput';
 import { Link } from 'react-router-dom';
+import Tittle from "../../components/Tittle";
 
 const Registro = () => {
-  const [nome, setNome] = useState('');
-  const [usuario, setUsuario] = useState('');
-  const [email, setEmail] = useState('');
-  const [funcao, setFuncao] = useState('');
-  const [senha, setSenha] = useState('');
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = { nome, usuario, email, funcao, senha };
-    console.log(formData);
-  };
+    const onSubmit = () => {
+      navigate("/login")
+    }
+
+
     return ( 
         <>
-            <main className=" h-screen w-screen flex flex-col justify-between font-sans mt-20">
-        <div className="flex flex-col justify-center items-center flex-1 py-10 ">
-          <div className="flex flex-col justify-center items-center w-[800px] bg-gray-300 p-8 rounded">
-            <h1 className="text-3xl text-center font-bold font-sans mb-6">Cadastro</h1>
+        <div className=" h-screen w-screen flex flex-col justify-between font-sans mt-20">
+          <div className="flex flex-col justify-center items-center flex-1 py-10 ">
+            <div className="flex flex-col justify-center items-center w-[800px] bg-gray-300 p-8 rounded">
+              <Tittle>
+                Cadastro
+              </Tittle>
 
-            <form className="flex flex-col w-[400px] gap-4" onSubmit={handleSubmit}>
-              <div>
-                <label className="font-sans font-semibold mb-1 block">Nome Completo*</label>
-                <input
-                  type="text"
-                  value={nome}
-                  onChange={(e) => setNome(e.target.value)}
-                  required
-                  className="bg-white text-center h-9 mb-2 rounded w-full"
+              <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-[400px]">
+
+                <FormInput 
+                id="nome"
+                type="text"
+                label="Nome Completo" 
+                {...register("text", { required: "Senha é obrigatória" })}
                 />
-              </div>
 
-              <div>
-                <label className="font-sans font-semibold mb-1 block">Usuário*</label>
-                <input
-                  type="text"
-                  value={usuario}
-                  onChange={(e) => setUsuario(e.target.value)}
-                  required
-                  className="bg-white text-center h-9 mb-2 rounded w-full"
+                <FormInput
+                label="E-mail"
+                id="email"
+                type="email"
+                {...register("email", {
+                  required: "O email é obrigatório.",
+                  pattern: {
+                    value: /^\S+@\S+\.\S+$/,
+                    message: "Formato de email inválido.",
+                  }
+                })}
                 />
-              </div>
+                {errors.email && (
+                  <p className="text-red-500 text-sm mb-2">{errors.email.message}</p>
+                )}
 
-              <div>
-                <label className="font-sans font-semibold mb-1 block">E-mail*</label>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-white text-center h-9 mb-2 rounded w-full"
+                <FormInput 
+                  id="senha" 
+                  type="password" 
+                  label="senha" 
+                  {...register("password", { required: "Senha é obrigatória" })}
                 />
-              </div>
 
-              <div>
-                <label className="font-sans font-semibold mb-1 block">Função*</label>
-                <input
-                  type="text"
-                  value={funcao}
-                  onChange={(e) => setFuncao(e.target.value)}
-                  required
-                  className="bg-white text-center h-9 mb-2 rounded w-full"
+                <FormInput 
+                id="funçao"
+                type="text"
+                label="Função" 
+                {...register("text", { required: "Função é obrigatório" })}
                 />
-              </div>
 
-              <div>
-                <label className="font-sans font-semibold mb-1 block">Senha*</label>
-                <input
-                  type="password"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
-                  required
-                  className="bg-white text-center h-9 mb-2 rounded w-full"
-                />
-              </div>
-
-              <button
+               <Button
                 type="submit"
-                className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
-                
+                className="w-[150px] h-10 self-center"
               >
                 Cadastrar
-              </button>
-
-              <p className="mt-4 text-center">
-                Já tem conta? <Link to="/" className="font-bold text-blue-600">Entrar</Link>
-              </p>
+              </Button>
             </form>
+            <p className="mt-4 text-center">
+                Já tem conta? <Link to="/" className="font-bold text-blue-600">Entrar</Link>
+            </p>
           </div>
         </div>
 
         
-      </main>
+      </div>
         </>
      );
 }

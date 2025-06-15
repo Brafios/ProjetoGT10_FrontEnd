@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
+import Button from '../../components/Button';
+import FormInput from '../../components/FormInput';
+import Tittle from "../../components/Tittle";
+
 const Recuperar = () => {
-    const [email, setEmail] = useState("");
+
     const navigate = useNavigate();
     
-    const handleRecuperar = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    
+    const onSubmit = () => {
         const foundUser = mockUsers.find(
             (user) => user.email === email 
         );
@@ -17,34 +23,44 @@ const Recuperar = () => {
         }
     };
     return ( 
-        <>
+        
          <div className="h-screen w-screen flex justify-center items-center">
             <div className="flex flex-col items-center w-screen">
                 <div className="flex flex-col justify-center items-center w-[800px] h-[400px] bg-gray-300 p-8 rounded">
-                    <h1 className="text-3xl text-center font-bold font-serif mb-6">Recuperar Senha</h1>
-        
-                    <div className="flex flex-col w-[400px]">
-                    <label className="font-serif font-semibold mb-1">Usuário ou E-mail</label>
-                    <input
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="bg-white text-center h-10 mb-4 rounded"
-                    />
-                    <button
-                    onClick={handleRecuperar}
-                    className="bg-gray-500 text-white font-bold rounded-md w-[150px] h-10 self-center"
-                    >
-                    Confirmar
-                    </button>
+                    <Tittle>
+                        Recuperar Senha
+                    </Tittle>
+
+                    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-[400px]">
+                        <FormInput
+                            label="E-mail"
+                            id="email"
+                            type="email"
+                            {...register("email", {
+                                required: "O email é obrigatório.",
+                                pattern: {
+                                value: /^\S+@\S+\.\S+$/,
+                                message: "Formato de email inválido.",
+                                }
+                            })}
+                            />
+                            {errors.email && (
+                            <p className="text-red-500 text-sm mb-2">{errors.email.message}</p>
+                        )}
+                        <Button
+                            type="submit"
+                            className="w-[150px] h-10 self-center"
+                        >
+                            Entrar
+                        </Button>
+                    </form>
+                    <p className="mt-4">
+                        Não tem conta? <a href="/register" className="font-bold">Cadastre-se</a>
+                    </p>
                 </div>
-                <p className="mt-4">
-                Não tem conta? <a href="/register" className="font-bold">Cadastre-se</a>
-                </p>
-                </div>
-    
             </div>
         </div>
-        </>
+   
      );
 }
  
