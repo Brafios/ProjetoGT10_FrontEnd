@@ -16,7 +16,7 @@ Para o Front-End, utilizamos a biblioteca React para a construção da interface
 
 ### Integrantes do Projeto:
 - **Nome 1**: Matheus Carvalho de Araújo **Likedin:** https://www.linkedin.com/in/matheuscarvalho-sec/
-- **Nome 2**: 
+- **Nome 2**: Clive Kifumbi **LinkedIn:** https://www.linkedin.com/in/clive-kifumbi/
 - **Nome 3**:
 - **Nome 4**:
 - **Nome 5**:
