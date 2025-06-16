@@ -1,15 +1,21 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
+//require('dotenv').config();
+
+const  SERVICE_ID = "service_poh07dp";
+const  TEMPLATE_ID = "template_8gu6iie";
+const  PUBLIC_KEY = "i1tB6IHlvHuPEcMyH";
 
 const initialState = {
   name: "",
   email: "",
+  numphone: "",
   message: "",
 };
 
 const Contato = () => {
-  const [{ name, email, message }, setState] = useState(initialState);
+  const [{ name, email, numphone, message }, setState] = useState(initialState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,21 +26,24 @@ const Contato = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
+    console.log(name, email, numphone, message);
     
     {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
     
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
       .then(
         (result) => {
           console.log(result.text);
+          alert ( 'Mensagem enviada com sucesso' );
           clearState();
         },
         (error) => {
           console.log(error.text);
+          alert ( 'Algo deu errado!' );
         }
       );
+    e.target.reset(); 
   };
     return ( 
         <>
@@ -46,7 +55,7 @@ const Contato = () => {
                         Utilize o formulário abaixo para se comunicar com a Federação das Associações Comerciais do Ceará (FACC).
                         </p>
                 
-                        <form name="sentMessage" validate onSubmit={handleSubmit} className="flex flex-col w-[400px]">
+                        <form name="sentMessage" onSubmit={handleSubmit} className="flex flex-col w-[400px]">
                             <label className="font-serif font-semibold mb-1">Nome</label>
                             <input
                             type="text"
@@ -69,9 +78,9 @@ const Contato = () => {
 
                             <label className="font-serif font-semibold mb-1">Telefone</label>
                             <input
-                            type="phone"
-                            id="phone"
-                            name="phone"
+                            type="numphone"
+                            id="numphone"
+                            name="numphone"
                             className="bg-white text-center h-10 mb-4 rounded"
                             required
                             onChange={handleChange}
