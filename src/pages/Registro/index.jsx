@@ -30,7 +30,12 @@ const Registro = () => {
                 id="nome"
                 type="text"
                 label="Nome Completo" 
-                {...register("text", { required: "Senha é obrigatória" })}
+                {...register("nome", { required: "O nome é obrigatório",
+                  minLength:{
+                    value: 3,
+                    message:"O nome deve ter no máximo 50 caracteres",
+                  },
+                })}
                 />
 
                 <FormInput
