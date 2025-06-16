@@ -22,7 +22,7 @@ Para o Front-End, utilizamos a biblioteca React para a construção da interface
 - **Nome 5**: Vivian Costa **LinkedIn:** 
 - **Nome 6**: Jair Santos **LinkedIn:** 
 - **Nome 7**: Jarilson Moreira **LinkedIn:**
-- **Nome 8**: Geyson Ribeiro**LinkedIn:** 
+- **Nome 8**: Geyson Ribeiro **LinkedIn:** 
 
 ---
 
