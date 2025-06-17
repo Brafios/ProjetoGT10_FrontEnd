@@ -43,7 +43,7 @@ const Registro = () => {
                 id="nome"
                 type="text"
                 label="Nome Completo" 
-                {...register("nome", { required: "O nome é obrigatório" })} // CORRIGIDO
+                {...register("nome", { required: "O nome é obrigatório" })} 
                 />
 
                 <FormInput
@@ -66,15 +66,35 @@ const Registro = () => {
                   id="senha" 
                   type="password" 
                   label="senha" 
-                  {...register("password", { required: "Senha é obrigatória" })}
+                  {...register("password", { 
+                    required: "Senha é obrigatória",
+                    minLength:{
+                      value: 6,
+                      message:"A senha deve conter letras e números."
+                    }
+                   })}
                 />
+
+                  {errors.password && (
+                 <p className="text-red-500 text-sm">{errors.password.message}</p>
+            )}
 
                 <FormInput 
                 id="funçao"
                 type="text"
                 label="Função" 
-                {...register("funcao", { required: "A função é obrigatória" })} // CORRIGIDO
+                {...register("funcao", {
+                   required: "A função é obrigatória", 
+                   minLength: {
+                   value:2,
+                   message: "A função deve ter pelo menos 2 caracteres."
+                    
+                   }
+                  })} 
                 />
+                  {errors.funcao && (
+                  <p className="text-red-500 text-sm">{errors.funcao.message}</p>
+            )}
 
                <Button
                 type="submit"
