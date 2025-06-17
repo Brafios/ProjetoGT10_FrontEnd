@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:3000', 
+  baseURL: 'projeto-gt-10-back-end.vercel.app', 
   headers: {
     'Content-Type': 'application/json',
   },
