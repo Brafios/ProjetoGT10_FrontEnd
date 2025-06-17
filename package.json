@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^2.2.0",
+    "axios": "^1.10.0",
     "bootstrap": "^5.3.6",
     "emailjs-com": "^2.6.4",
     "keen-slider": "^6.8.6",
