@@ -1,5 +1,7 @@
 
-const FormInput = ({ label, id, type = "text", children, ...rest }) => {
+import { forwardRef } from "react";
+
+const FormInput = forwardRef(({ label, id, type = "text", children, ...rest }, ref) => {
   return (
     <div className="mb-4 w-full">
       {label && (
@@ -12,10 +14,11 @@ const FormInput = ({ label, id, type = "text", children, ...rest }) => {
         id={id}
         type={type}
         className="bg-white text-center h-10 rounded w-full"
-        {...rest} 
+        ref={ref}
+        {...rest}
       />
     </div>
   );
-};
+});
 
 export default FormInput;
