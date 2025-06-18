@@ -12,7 +12,7 @@ const Recuperar = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const [message, setMessage] = useState("");
-    const [loading, setLoading] = useSate(False);
+    const [loading, setLoading] = useState(false);
 
     
     const onSubmit = async (data) => {
@@ -73,7 +73,7 @@ const Recuperar = () => {
               className="w-[200px] h-10 self-center mt-4"
               disabled={loading}
             >
-              {loading ? "Enviando..." : "Enviar Link de Recuperação"}
+              {loading ? "Enviando..." : "Enviar Link"}
             </Button>
           </form>
           
