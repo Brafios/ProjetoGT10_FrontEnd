@@ -22,7 +22,9 @@ const Login = () => {
       });
 
       //  se backend aceita status 200
-      console.log(response.data.message); 
+      if (response.data.session){
+        localStorage.setItem('supabase.session', JSON.stringify(response.data.session));
+      } 
 
       
       navigate("/");
