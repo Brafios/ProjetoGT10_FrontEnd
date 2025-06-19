@@ -56,7 +56,7 @@ const Login = () => {
               id="email"
               type="email"
               {...register("email", {
-                required: "O email é obrigatório.",
+                required: "O email é obrigatório",
                 pattern: {
                   value: /^\S+@\S+\.\S+$/,
                   message: "Formato de email inválido.",
