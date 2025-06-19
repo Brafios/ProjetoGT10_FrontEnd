@@ -1,24 +1,26 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import API from '../../Api';
+import { useState, useEffect, Fragment } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import API from '../../Api'; 
 import logo from "../../assets/img/logo_sem_fundo.png";
 import {
   Dialog,
   DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
   Popover,
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-  Menu
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  Transition,
 } from '@headlessui/react';
 import {
   Bars3Icon,
   XMarkIcon,
   MoonIcon,
-  SunIcon
+  SunIcon,
+  UserCircleIcon, 
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
@@ -27,56 +29,65 @@ const products = [
 ];
 
 const Header = () => {
-
-    const [user, setUser] = useState(null)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
+    
+    
+    const [user, setUser] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
-      const checkUser = async () => {
-        try {
-          const response = await API.get('/auth/me');
-          setUser(response.data);
-        } catch (error){
-          setUser(null);
+        const checkUser = async () => {
+            
+            const session = localStorage.getItem('supabase.session');
+            if (session) {
+                try {
+                    const response = await API.get('/auth/me');
+                    setUser(response.data); 
+                } catch (error) {
+                    localStorage.removeItem('supabase.session');
+                    setUser(null);
+                }
+            }
+        };
+        checkUser();
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = !isDarkMode;
+        setIsDarkMode(newTheme);
+        const themeString = newTheme ? 'dark' : 'light';
+        localStorage.setItem('theme', themeString);
+        document.documentElement.classList.toggle('dark', newTheme);
+    };
+    
+    useEffect(() => {
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
-      }
-      checkUser();
-    }, [])
+    }, [isDarkMode]);
 
     const handleLogout = async () => {
-      try{
-        await API.post('/auth/logout')
-      } finally {
-        localStorage.remoteItem('supabase.session')
-        setUser(null);
-        navigate('/login')
-      }
-    }
-
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    
-      const [isDarkMode, setIsDarkMode] = useState(() => {
-        return localStorage.getItem('theme') === 'dark';
-      });
-    
-      const toggleTheme = () => {
-        const newTheme = isDarkMode ? 'light' : 'dark';
-        localStorage.setItem('theme', newTheme);
-        setIsDarkMode(!isDarkMode);
-      };
-    
-      useEffect(() => {
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-      }, [isDarkMode]);
+        try {
+            await API.post('/auth/logout');
+        } finally {
+            localStorage.removeItem('supabase.session');
+            setUser(null);
+            navigate('/login');
+        }
+    };
     
     return ( 
- <div>
+      <div>
         <nav aria-label="Global" className="bg-[--secondary-color] fixed top-0 left-0 w-full z-50 flex items-center justify-between p-4 lg:px-8 shadow-lg" style={{ minHeight: "60px" }}>
-          <div className="flex items-center mr-4">
-            <div className="flex lg:flex-1"><a href="/"><img alt="Logo" src={logo} className="h-[70px] w-auto" /></a></div>
+          <div className="flex items-center">
+            <div className="flex ml-8 lg:flex-1"><a href="/"><img alt="Logo" src={logo} className="h-[70px] w-auto" /></a></div>
           </div>
           
-          <PopoverGroup className="hidden ml-52 lg:flex lg:gap-x-12">
+          <PopoverGroup className="hidden ml-56 lg:flex lg:gap-x-12">
              <a href="/" className="text-[--tertiary-text] text-lg font-semibold no-underline">Home</a>
              <a href="/about" className="text-[--tertiary-text] text-lg font-semibold no-underline">Sobre</a>
              <Popover className="relative">
@@ -93,13 +104,12 @@ const Header = () => {
              <a href="/contato" className="text-[--tertiary-text] text-lg font-semibold no-underline">Contato</a>
           </PopoverGroup>
 
-          <div className="hidden mr-16 lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
-            <button onClick={toggleTheme} className="text-[--tertiary-text] transition p-2 rounded-full mr-10" aria-label="Alternar tema">
+          <div className="hidden mr-24 lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
+            <button onClick={toggleTheme} className="text-[--tertiary-text] mr-16 transition p-2 rounded-full" aria-label="Alternar tema">
               {isDarkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
             </button>
             
             {user ? (
-              // --- SE O USUÁRIO ESTIVER LOGADO, MOSTRA O ÍCONE COM MENU ---
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <MenuButton className="flex items-center rounded-full text-[--tertiary-text] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -123,9 +133,10 @@ const Header = () => {
                 </Transition>
               </Menu>
             ) : (
+              
               <button
                 onClick={() => navigate("/login")}
-                className="text-[--secondary-color] mr-2 bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md px-4 py-2"
+                className="text-[--secondary-color] -ml-7 -mr-6 bg-[--button-secondary-color] hover:bg-[#0071BC] text-lg font-semibold no-underline rounded-md px-4 py-2"
               >
                 Login
               </button>
@@ -150,7 +161,6 @@ const Header = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {/* Seus links de navegação mobile */}
                 </div>
                 <div className="py-6">
                   {user ? (
@@ -167,7 +177,7 @@ const Header = () => {
           </DialogPanel>
         </Dialog>
       </div>
-     );
+    );
 }
  
 export default Header;
