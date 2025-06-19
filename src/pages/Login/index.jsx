@@ -27,7 +27,7 @@ const Login = () => {
       } 
 
       
-      navigate("/");
+       window.location.href = "/";
 
     } catch (err) {
    
