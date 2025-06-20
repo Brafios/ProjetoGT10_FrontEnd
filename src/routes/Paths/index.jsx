@@ -13,7 +13,7 @@ import Contato from "../../pages/Contato"
 
 import AtualizarSenha from "../../pages/AtualizarSenha";
 import Noticias from "../../pages/Noticias";
-import AssociacoesAutenticadas from "../../pages/AssociaçãoAutenticado";
+import AssociacoesAutenticadas from "../../pages/AssociacaoAutenticado";
 import PrivateRoute from "../PrivateRoute";
 
 
