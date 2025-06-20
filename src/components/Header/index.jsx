@@ -72,6 +72,21 @@ const Header = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
+   
+  const [noticias, setNoticias] = useState([]);
+
+   useEffect(() => {
+        const fetchNoticias = async () => {
+            try {
+                const response = await API.get('/noticias');
+                setNoticias(response.data);
+            } catch (error) {
+                console.error('Erro ao carregar as notícias:', error);
+            }
+        };
+        
+        fetchNoticias();
+    }, []);
 
   const handleLogout = async () => {
     try {
@@ -104,7 +119,7 @@ const Header = () => {
               </PopoverPanel>
             </Popover>
             <a href="/EmConstrucao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Serviços</a>
-            <a href="/EmConstrucao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
+            <a href="/noticias" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
             <a href="/contato" className="text-[--tertiary-text] text-lg font-semibold no-underline">Contato</a>
           </PopoverGroup>
 
