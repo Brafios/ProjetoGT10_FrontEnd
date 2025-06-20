@@ -144,7 +144,7 @@ const AssociacoesAutenticadas = () => {
                     </div>
                 )}
             </div>
-            <Button onClick={() =>  handleSalvar}>
+            <Button onClick={handleSalvar}>
                 Voltar
             </Button>
         </div>
