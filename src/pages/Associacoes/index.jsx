@@ -42,8 +42,8 @@ const Associacoes = () => {
     }
 
     return ( 
-    <div className="min-h-screen w-screen flex justify-center items-start py-8 px-4">
-        <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg mt-32">
+    <div className="min-h-screen w-screen flex justify-center items-start py-8 px-4 mt-20">
+        <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg mt-16">
           <Tittle>Associações</Tittle>
 
           <div className="relative w-full max-w-[600px] mb-8">
