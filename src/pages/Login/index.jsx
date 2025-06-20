@@ -23,11 +23,11 @@ const Login = () => {
 
       //  se backend aceita status 200
       if (response.data.session){
-        localStorage.setItem('supabase.session', JSON.stringify(response.data.session));
+        localStorage.setItem('supabase.session', JSON.stringify(response.data.session))
       } 
 
       
-       window.location.href = "/";
+      window.location.href = "/";
 
     } catch (err) {
    
@@ -56,7 +56,7 @@ const Login = () => {
               id="email"
               type="email"
               {...register("email", {
-                required: "O email é obrigatório",
+                required: "O email é obrigatório.",
                 pattern: {
                   value: /^\S+@\S+\.\S+$/,
                   message: "Formato de email inválido.",

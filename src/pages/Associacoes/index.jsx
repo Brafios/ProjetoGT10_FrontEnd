@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
 
+import Button from '../../components/Button';
 import Tittle from "../../components/Tittle";
 import API from "../../Api.js"; 
 
@@ -45,7 +46,6 @@ const Associacoes = () => {
     <div className="min-h-screen w-screen flex justify-center items-start py-8 px-4">
         <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg mt-32">
           <Tittle>Associações</Tittle>
-
           <div className="relative w-full max-w-[600px] mb-8">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
             <input
@@ -64,6 +64,8 @@ const Associacoes = () => {
                   key={assoc.id}
                   className="bg-white w-full rounded-lg p-6 shadow-md flex flex-col gap-2"
                 >
+                  <div className="flex justify-between">
+                  </div>
                   <h2 className="text-xl text-gray-600 mb-1">{assoc.cidade}</h2>
                   <h4 className="text-xl font-bold mb-1">{assoc.nome}</h4>
                   <p className="text-sm text-gray-700 leading-relaxed">

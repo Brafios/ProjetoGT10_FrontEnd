@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+
+//Publicas
 import Home from "../../pages/Home";
 import Layout from "../../Layout"
 import About from "../../pages/About"
@@ -10,7 +12,11 @@ import Registro from "../../pages/Registro";
 import Recuperar from "../../pages/Recuperar";
 import Associacoes from "../../pages/Associacoes"
 import Contato from "../../pages/Contato"
-import AtualizarSenha from "../../pages/AtualizarSenha"; 
+import AtualizarSenha from "../../pages/AtualizarSenha";
+
+//privadas
+import PrivateRoute from "../PrivateRoute"; 
+import AssociacoesAutenticadas from "../../pages/AssociaçãoAutenticado";
 
 const Paths = () => {
     return ( 
@@ -25,6 +31,9 @@ const Paths = () => {
                     <Route path="/associacoes" element={<Associacoes/>}/>
                     <Route path="/contato" element={<Contato/>}/>
                     <Route path="/update-password" element={<AtualizarSenha />} />
+                </Route>
+                <Route element={<PrivateRoute />}>    
+                    <Route path="/admin/associacoes" element={<AssociacoesAutenticadas />} />
                 </Route>
                 <Route path="/EmConstrucao" element={<EmConstrucao/>}/>
                 <Route path="/*" element={<NotFound />} />
