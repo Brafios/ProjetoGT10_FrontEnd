@@ -10,10 +10,12 @@ import Registro from "../../pages/Registro";
 import Recuperar from "../../pages/Recuperar";
 import Associacoes from "../../pages/Associacoes"
 import Contato from "../../pages/Contato"
-import AtualizarSenha from "../../pages/AtualizarSenha";
 
+import AtualizarSenha from "../../pages/AtualizarSenha";
+import Noticias from "../../pages/Noticias";
 import AssociacoesAutenticadas from "../../pages/AssociaçãoAutenticado";
 import PrivateRoute from "../PrivateRoute";
+
 
 const Paths = () => {
     return ( 
@@ -26,6 +28,7 @@ const Paths = () => {
                     <Route path="/registro" element={<Registro/>}/>
                     <Route path="/recuperar" element={<Recuperar/>}/>
                     <Route path="/associacoes" element={<Associacoes/>}/>
+                    <Route path="/noticias" element={<Noticias/>}/>
                     <Route path="/contato" element={<Contato/>}/>
                     <Route path="/update-password" element={<AtualizarSenha />} />
                 </Route>

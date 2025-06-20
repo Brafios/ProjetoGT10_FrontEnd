@@ -68,6 +68,7 @@ const Header = () => {
         }
     };
 
+
     
     const products = useMemo(() => ([
         { 
@@ -76,16 +77,35 @@ const Header = () => {
           href: user ? '/admin/associacoes' : '/associacoes',
         }
     ]), [user]); 
+  
+   const [noticias, setNoticias] = useState([]);
 
-    return ( 
-      <div>
-        <nav aria-label="Global" className="bg-[--secondary-color] fixed top-0 left-0 w-full z-50 flex items-center justify-between p-4 lg:px-8 shadow-lg" style={{ minHeight: "60px" }}>
-          <div className="flex lg:flex-1"><a href="/"><img alt="Logo" src={logo} className="h-[70px] w-auto" /></a></div>
-          
-          <PopoverGroup className="hidden lg:flex lg:gap-x-12 lg:ml-20">
-             <a href="/" className="text-[--tertiary-text] text-lg font-semibold no-underline">Home</a>
-             <a href="/about" className="text-[--tertiary-text] text-lg font-semibold no-underline">Sobre</a>
-             <Popover className="relative">
+   useEffect(() => {
+        const fetchNoticias = async () => {
+            try {
+                const response = await API.get('/noticias');
+                setNoticias(response.data);
+            } catch (error) {
+                console.error('Erro ao carregar as notícias:', error);
+            }
+        };
+        
+        fetchNoticias();
+    }, []);
+
+    return (
+    <div className="pt-[10px]">
+      <nav aria-label="Global" className="bg-[--secondary-color] fixed top-0 left-0 w-full z-50 flex items-center justify-between p-4 lg:px-8  shadow-lg" style={{ minHeight: "60px" }}>
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4 lg:px-8">
+          <div className="flex items-center">
+            <a href="/"><img alt="Logo" src={logo} className="h-[60px] w-auto max-w-[180px] sm:h-[65px] lg:h-[70px]" /></a>
+          </div>
+
+          <PopoverGroup className="hidden ml-20 lg:flex lg:gap-x-12">
+            <a href="/" className="text-[--tertiary-text] text-lg font-semibold no-underline">Home</a>
+            <a href="/about" className="text-[--tertiary-text] text-lg font-semibold no-underline">Sobre</a>
+            <Popover className="relative">
+
               <PopoverButton className="text-[--tertiary-text] flex items-center gap-x-1 text-lg font-semibold outline-none">
                 Associações
                 <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
@@ -102,9 +122,11 @@ const Header = () => {
                 </div>
               </PopoverPanel>
             </Popover>
-             <a href="/EmConstrucao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Serviços</a>
-             <a href="/EmConstrucao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
-             <a href="/contato" className="text-[--tertiary-text] text-lg font-semibold no-underline">Contato</a>
+
+            <a href="/EmConstrucao" className="text-[--tertiary-text] text-lg font-semibold no-underline">Serviços</a>
+            <a href="/noticias" className="text-[--tertiary-text] text-lg font-semibold no-underline">Notícias</a>
+            <a href="/contato" className="text-[--tertiary-text] text-lg font-semibold no-underline">Contato</a>
+
           </PopoverGroup>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4 lg:mr-24">
