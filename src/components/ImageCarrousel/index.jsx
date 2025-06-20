@@ -16,10 +16,6 @@ const ImageCarousel = () => {
         slides: {
           perView: 1,
         },
-        autoplay: {
-          delay: 2500,
-          stopOnInteraction: false,
-        },
         created(slider) {
           setInterval(() => {
             slider.next();
@@ -27,13 +23,13 @@ const ImageCarousel = () => {
         }
       });
     return ( 
-        <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden w-full top-24">
+        <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden aspect-[2/1] max-h-[500px]">
         {images.map((src, index) => (
-        <div key={index} className="keen-slider__slide">
-          <img src={src} alt={`slide-${index}`} className="w-[1000px] h-[500px] object-cover"/>
+        <div key={index} className="keen-slider__slide flex justify-center items-center">
+          <img src={src} alt={`slide-${index}`} className="w-full h-full object-cover"/>
         </div>
-      ))}
-    </div>
+        ))}
+      </div>
      );
 }
  
