@@ -34,16 +34,16 @@ const Associacoes = () => {
     )
 
     if (loading){
-      return <div className="text-center mt-40">Carregando associações...</div>
+      return <div className="pt-[50px]"> <div className="text-center mt-28">Carregando associações...</div> </div>
     }
 
     if (error) {
-      return <div className="text-center mt-40 text-red-500">{error}</div>
+      return <div className="pt-[50px]"> <div className="text-center mt-28 text-red-500">{error}</div></div>
     }
 
     return ( 
-    <div className="min-h-screen w-screen flex justify-center items-start py-8 px-4 mt-20">
-        <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg">
+    <div className="min-h-screen w-screen flex justify-center items-start py-8 px-4">
+        <div className="flex flex-col items-center w-full max-w-[900px] bg-gray-300 p-8 rounded shadow-lg mt-32">
           <Tittle>Associações</Tittle>
 
           <div className="relative w-full max-w-[600px] mb-8">

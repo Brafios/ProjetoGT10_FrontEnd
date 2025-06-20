@@ -11,13 +11,13 @@
 :root {
   --primary-color: #3b8ea5;
   --secondary-color: #ffffff;
-  --tertiary-color: #005E8A;
+  --tertiary-color: #1c79c6;
   --button-secondary-color: #009739;
   --emphasis-color: #f0ad4e;
   --background-color: #f4f7f6;
   --primary-text: #333333;
   --secondary-text: #6c757d;
-  --tertiary-text: #005E8A;
+  --tertiary-text: #1c79c6;
   --overlay-color: #00000080;
 }
 
