@@ -57,6 +57,10 @@ const AssociacoesAutenticadas = () => {
         setIsModalOpen(true);
     };
 
+    const handleSalvar = () => {
+        navigate("/");
+    }
+
     const associacoesFiltradas = associacoes.filter(
         (item) =>
             item.nome.toLowerCase().includes(search.toLowerCase()) ||
@@ -140,6 +144,9 @@ const AssociacoesAutenticadas = () => {
                     </div>
                 )}
             </div>
+            <Button onClick={() =>  handleSalvar}>
+                Voltar
+            </Button>
         </div>
     );
 };
