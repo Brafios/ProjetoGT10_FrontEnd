@@ -35,16 +35,16 @@ const Recuperar = () => {
 
     return ( 
         
-    <div className="h-screen w-screen flex justify-center items-center">
-      <div className="flex flex-col items-center w-screen">
-        <div className="flex flex-col justify-center items-center w-[800px] h-auto py-10 bg-gray-300 p-8 rounded">
+    <div className="min-h-screen w-full flex justify-center items-center px-4">
+      <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col justify-center items-center w-full max-w-xl py-10 bg-gray-300 px-6 sm:px-10 rounded-lg shadow-md">
           <Tittle>Recuperar Senha</Tittle>
 
-          <p className="text-center mb-4 text-gray-600">
+          <p className="text-center mb-4 text-gray-600 text-sm sm:text-base">
             Digite seu e-mail para receber um link de recuperação.
           </p>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-[400px]">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full max-w-sm">
             <FormInput
               label="E-mail"
               id="email"
@@ -70,14 +70,14 @@ const Recuperar = () => {
 
             <Button
               type="submit"
-              className="w-[200px] h-10 self-center mt-4"
+              className="w-full sm:w-[200px] h-10 self-center mt-4"
               disabled={loading}
             >
               {loading ? "Enviando..." : "Enviar Link"}
             </Button>
           </form>
           
-          <p className="mt-6">
+          <p className="mt-6 text-sm text-center">
             Lembrou a senha? <Link to="/login" className="font-bold text-blue-600 hover:underline">Fazer Login</Link>
           </p>
         </div>
