@@ -31,16 +31,19 @@ const Home = () => {
                         />
                     </div>
                     <div className="flex flex-col text-center">
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Fortaleza</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio João Pessoa</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Porto Velho</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio São Paulo</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Rio de Janeiro</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Vitória</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Boa Vista</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Cuiabá</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Bahia</div>
-                        <div onClick={manutencao} className="cursor-pointer socios flex justify-center items-center text-xl h-[50px] border-b-4 border-color: #C9CCCD">Comércio Campo Grande</div>
+                        {[
+                            "Comércio Fortaleza", "Comércio João Pessoa", "Comércio Porto Velho",
+                            "Comércio São Paulo", "Comércio Rio de Janeiro", "Comércio Vitória",
+                            "Comércio Boa Vista", "Comércio Cuiabá", "Comércio Bahia", "Comércio Campo Grande"
+                        ].map((cidade, index) => (
+                            <div
+                                key={index}
+                                onClick={manutencao}
+                                className="cursor-pointer socios flex justify-center items-center text-xl h-12 border-b border-gray-300"
+                            >
+                                {cidade}
+                            </div>
+                        ))}
                     </div>
                 </aside>
 
