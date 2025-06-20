@@ -168,7 +168,7 @@ const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-10">
                 <a href="/" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-[--tertiary-text] hover:bg-gray-50">Home</a>
-                <a href="/em-construcao" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-[--tertiary-text] hover:bg-gray-50">Sobre</a>
+                <a href="/about" className="block rounded-lg px-3 py-2 text-base font-semibold no-underline text-[--tertiary-text] hover:bg-gray-50">Sobre</a>
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 px-3 text-base font-semibold no-underline text-[--tertiary-text] hover:bg-gray-50">
                     Associações
