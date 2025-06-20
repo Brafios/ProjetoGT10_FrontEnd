@@ -58,7 +58,7 @@ const AssociacoesAutenticadas = () => {
     };
 
     const handleSalvar = () => {
-        navigate("/");
+        window.location.href = "/";
     }
 
     const associacoesFiltradas = associacoes.filter(
