@@ -4,7 +4,7 @@ import { Search, X } from "lucide-react";
 import Button from '../../components/Button/index.jsx';
 import Tittle from "../../components/Tittle/index.jsx";
 import API from "../../Api.js"; 
-import AssociacaoForm from "../../components/AssociacaoForm/index.jsx"; 
+import AssociacaoForm from "../../components/AssociationForm/index.jsx"; 
 
 const AssociacoesAutenticadas = () => {
     const [associacoes, setAssociacoes] = useState([]);
