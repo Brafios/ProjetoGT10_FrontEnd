@@ -76,7 +76,7 @@ const Registro = () => {
                 <FormInput 
                   id="senha" 
                   type="password" 
-                  label="senha" 
+                  label="Senha" 
                   {...register("password", { 
                     required: "Senha é obrigatória",
                     minLength:{

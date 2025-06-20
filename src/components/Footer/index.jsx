@@ -1,56 +1,67 @@
 import { Instagram, Facebook, X, Youtube, Twitch } from 'lucide-react';
-import logo from '../../assets/img/Federaçao(1).png'
+import logo from '../../assets/img/Federaçao_footer.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-[--tertiary-color] text-white flex px-60  h-[250px] gap-[10px] text-sm ">
-        <div id="footer" className="">
-          <div className="flex items-center gap-[20px] h-full w-full ">
-            <div className="flex flex-col  gap-2 w-[34%] -ml-64">
-              <div className="w-[75%] h-[75%] m-auto flex">
-                <img
-                  src={logo}
-                  alt="Logo da FACC"
-                  className="w-auto h-auto"
-                />
-              </div>
-              <div className="flex justify-center gap-4">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Instagram /></a>
-                <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" rel="noopener noreferrer"><Facebook /></a>
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><X /></a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><Youtube /></a>
-                <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer"><Twitch /></a>
-              </div>
-            </div>
-            <div className="flex flex-col gap-[3px] w-[22%] h-[75%] mt-10 ml-16">
-              <h1 className="text-[25px]">Contato</h1>
-              <p className="leading-[12px] my-[3px]"><strong>Endereço:</strong> <br />Rua Dr. João Moreira, 207, Centro. <br />Fortaleza, Ceará - Cep: 60000-000 </p>
-              <p className="leading-[12px] my-[3px]"><strong>Telefone:</strong>  (85) 3252-2052</p>
-              <p className="leading-[12px] my-[3px]"><strong>Horário de funcionamento:</strong> <br /> De segunda a sexta, das 8h às 17h.</p>
-              <p className="leading-[12px] my-[3px]"><strong>E-mail:</strong> email@email.org.br</p>
-            </div>
+    <footer className="bg-[--tertiary-color] text-white px-6 py-10 text-sm">
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-10">
 
-            <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%] text-left ml-48">
-              <h1 className="text-[25px]">Sobre</h1>
-              <a href="/em-construcao">Sobre</a>
-              <a href="/associacoes">Associações</a>
-              <a href="/em-construcao">Filia-se</a>
-              <a href="/em-construcao">Serviços</a>
-              <a href="/contato">Contato</a>
-            </div>
-
-            <div className="flex flex-col mt-10 gap-[3px] w-[22%] h-[75%] ml-28">
-              <h1 className="text-[25px]">Suporte</h1>
-              <a href="/em-construcao">Central de ajuda</a>
-              <a href="/em-construcao">Termos de serviços</a>
-              <a href="/em-construcao">Jurídico</a>
-              <a href="/em-construcao">Políticas de privacidade</a>
-              <a href="/em-construcao">Status</a>
-            </div>
+        {/* Logo e redes sociais */}
+        <div className="flex flex-col items-center md:items-start gap-4 md:w-1/4 w-full">
+          <img src={logo} alt="Logo da FACC" className="h-20 w-auto" />
+          <div className="flex gap-4">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Instagram /></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><Facebook /></a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><X /></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><Youtube /></a>
+            <a href="https://www.twitch.tv/" target="_blank" rel="noopener noreferrer"><Twitch /></a>
           </div>
+        </div>
+
+        {/* Contato */}
+        <div className="w-full md:w-1/4">
+          <h1 className="text-lg font-semibold mb-2">Contato</h1>
+          <p className="mb-2 leading-relaxed">
+            <strong>Endereço:</strong><br />
+            Rua Dr. João Moreira, 207, Centro.<br />
+            Fortaleza, Ceará - CEP: 60000-000
+          </p>
+          <p className="mb-2"><strong>Telefone:</strong> (85) 3252-2052</p>
+          <p className="mb-2"><strong>Horário:</strong> Segunda à sexta, 8h às 17h</p>
+          <p><strong>Email:</strong> email@email.org.br</p>
+        </div>
+
+        {/* Sobre */}
+        <div className="w-full md:w-1/4">
+          <h1 className="text-lg font-semibold mb-2">Sobre</h1>
+          <ul className="space-y-1">
+            <li><a href="/em-construcao">Sobre</a></li>
+            <li><a href="/associacoes">Associações</a></li>
+            <li><a href="/em-construcao">Filie-se</a></li>
+            <li><a href="/em-construcao">Serviços</a></li>
+            <li><a href="/contato">Contato</a></li>
+          </ul>
+        </div>
+
+        {/* Suporte */}
+        <div className="w-full md:w-1/4">
+          <h1 className="text-lg font-semibold mb-2">Suporte</h1>
+          <ul className="space-y-1">
+            <li><a href="/em-construcao">Central de ajuda</a></li>
+            <li><a href="/em-construcao">Termos de serviços</a></li>
+            <li><a href="/em-construcao">Jurídico</a></li>
+            <li><a href="/em-construcao">Políticas de privacidade</a></li>
+            <li><a href="/em-construcao">Status</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      {/* Direitos Autorais */}
+      <div className="mt-10 border-t border-gray-400 pt-4 text-center text-xs text-gray-300">
+        © {new Date().getFullYear()} Federação dos Comércios. Todos os direitos reservados.
       </div>
     </footer>
-    );
+  );
 }
  
 export default Footer;
