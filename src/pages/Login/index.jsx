@@ -43,14 +43,14 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <div className="flex flex-col items-center w-screen">
-        <div className="flex flex-col justify-center items-center w-[800px] h-auto py-10 bg-gray-300 p-8 rounded">
+    <div className="min-h-screen w-full flex justify-center items-center px-4">
+      <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col justify-center items-center w-full max-w-xl h-auto py-10 bg-gray-300 px-6 sm:px-10 rounded-lg shadow-md">
           <Tittle>
             Login
           </Tittle>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-[400px]">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full max-w-sm">
             <FormInput
               label="E-mail"
               id="email"
@@ -74,7 +74,7 @@ const Login = () => {
                 </label>
                 <Link
                   to="/recuperar"
-                  className="text-sm text-blue-500 font-bold hover:underline"
+                  className="text-sm text-blue-600 font-bold hover:underline"
                 >
                   Esqueceu a senha?
                 </Link>
@@ -92,15 +92,15 @@ const Login = () => {
 
             <Button
               type="submit"
-              className="w-[150px] h-10 self-center"
+              className="w-full sm:w-[150px] h-10 self-center mt-4"
             >
               Entrar
             </Button>
           </form>
 
-          <p className="mt-4 font-sans">
+          <p className="mt-4 text-sm text-center font-sans">
             Não tem conta?{" "}
-            <Link to="/registro" className="font-bold font-sans">
+            <Link to="/registro" className="font-bold font-sans text-blue-600 hover:underline">
               Cadastre-se
             </Link>
           </p>

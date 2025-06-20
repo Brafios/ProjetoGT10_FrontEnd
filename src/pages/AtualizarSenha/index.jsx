@@ -75,21 +75,21 @@ const AtualizarSenha = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <div className="flex flex-col items-center w-screen">
-        <div className="flex flex-col justify-center items-center w-[800px] h-auto py-10 bg-gray-300 p-8 rounded">
+    <div className="min-h-screen w-full flex justify-center items-center px-4">
+      <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col justify-center items-center w-full max-w-xl py-10 bg-gray-300 px-6 sm:px-10 rounded-lg shadow-md">
           <Tittle>Criar Nova Senha</Tittle>
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-[400px]">
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full max-w-sm">
             <FormInput id="NovaSenha" type="password" label="Nova Senha" {...register("password", { required: "A nova senha é obrigatória.", minLength: { value: 6, message: "A senha deve ter no mínimo 6 caracteres." } })} />
             {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
             <FormInput id="NovaSenhaConfirma" type="password" label="Confirme a Nova Senha" {...register("confirmPassword", { required: "A confirmação da senha é obrigatória.", validate: (value) => value === getValues("password") || "As senhas não coincidem." })} />
             {errors.confirmPassword && <p className="text-red-500 text-sm">{errors.confirmPassword.message}</p>}
             {message && <p className={`text-center font-bold my-2 ${errorType === 'error' ? 'text-red-500' : 'text-green-600'}`}>{message}</p>}
-            <Button type="submit" className="w-[200px] h-10 self-center mt-4" disabled={loading || !tokens}>
+            <Button type="submit" className="w-full sm:w-[200px] h-10 self-center mt-4" disabled={loading || !tokens}>
               {loading ? "Atualizando..." : "Atualizar Senha"}
             </Button>
           </form>
-          <p className="mt-6"><Link to="/login" className="font-bold text-blue-600 hover:underline">Voltar para o Login</Link></p>
+          <p className="mt-6 text-sm text-center"><Link to="/login" className="font-bold text-blue-600 hover:underline">Voltar para o Login</Link></p>
         </div>
       </div>
     </div>
